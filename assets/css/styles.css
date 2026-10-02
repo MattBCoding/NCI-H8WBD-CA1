@@ -11,4 +11,111 @@ body {
     min-block-size: 100svh;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* header general styling */
+.header-row-two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+/* hide main navigation for mobile devices by default */
+.main-navigation {
+    display: none;
+}
+
+.main-navigation ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.main-navigation a {
+    text-decoration: none;
+    color: #424844;
+    font-weight: 700;
+}
+
+.main-navigation .active-page {
+    color: #00120A;
+    position: relative;
+}
+
+.main-navigation .active-page::after {
+    content: '';
+    position: absolute;
+    bottom: -0.25rem;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: #785917;
+}
+
+header h1 {
+    font-size: 1.75rem;  /* px equivalent 28px */
+    font-weight: 600;
+    color: #00120A;
+    line-height: 2.5rem;
+}
+
+header h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem;  /* px equivalent 14px */
+    text-transform: uppercase;
+    color: #785917;
+}
+
+/* desktop navigation */
+
+
+/* mobile navigation */
+.mobile-navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.mobile-navigation a {
+    text-decoration: none;
+    color: #424844;
+    font-weight: 700;
+    font-size: 0.7rem;  /* px equivalent 11.2px */
+    padding: 0.6rem 0.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mobile-navigation .active-page {
+    color: #0B291E;
+}
+
+/* *************************** */
+/* media queries */
+/* *************************** */
+@media (min-width: 850px) {
+    /* show main navigation for desktop devices */
+    .main-navigation {
+        display: block;
+    }
+    /* hide mobile navigation for desktop devices */
+    .mobile-navigation {
+        display: none;
+    }
+
+    .wordmark-container h1 {
+        font-size: 2rem;  /* px equivalent 32px */
+    }
+
+    .wordmark-container h2 {
+        font-size: 1rem;  /* px equivalent 16px */
+    }
 }
