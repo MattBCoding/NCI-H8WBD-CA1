@@ -12,6 +12,7 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #FAF9F7;
 }
 
 h1,
@@ -24,6 +25,19 @@ h6 {
 }
 
 /* general styles */
+.page-container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.center-column {
+    grid-column: 2;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
 .gold {
   color: #785917;
 }
@@ -38,7 +52,14 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem;
+}
+
+.alternate-font-heading {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem; /* px equivalent 14px */
+    text-transform: uppercase;
 }
 
 /* hide main navigation for mobile devices by default */
@@ -81,16 +102,24 @@ header h1 {
   line-height: 2.5rem;
 }
 
-header h2 {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 700;
-  font-size: 0.875rem; /* px equivalent 14px */
-  text-transform: uppercase;
-}
-
 /* desktop navigation */
 
 /* mobile navigation */
+
+footer {
+    margin-bottom: 4rem;  /* forces space for the fixed mobile navigation */
+}
+
+.mobile-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
 .mobile-navigation ul {
   list-style: none;
   display: flex;
@@ -254,7 +283,7 @@ header h2 {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    min-width: 240px;
+    min-width: 100%;
     gap: 0.5rem;
 }
 
@@ -280,6 +309,103 @@ header h2 {
     font-size: 0.75rem; /* px equivalent 12px */
 }
 
+/* *************************** */
+/* Story Section */
+/* *************************** */
+.story-section {
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.story-section h2 {
+    font-weight: 400;
+    font-size: 2rem; /* px equivalent 32px */
+    margin-bottom: 1.5rem;
+}
+.story-section p {
+    margin-bottom: 0.75rem;
+}
+
+.story-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.story-text-container {
+    font-size: 0.875rem; /* px equivalent 14px */
+    font-weight: 300;
+}
+    
+.story-stats-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0.5rem;
+}
+
+.story-stat-card {
+    background-color: #FFFFFF;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.story-stat-card h3 {
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.story-stat-card h4 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: 0.25rem;
+}
+
+.story-section aside {
+    background-color: #0B291E;
+    color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 2rem;
+}
+
+.story-aside-image {
+    border-radius: 10%;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+}
+
+.story-aside-content blockquote {
+    font-style: italic;
+    font-family: "Playfair Display", serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+
+.story-aside-content h4 {
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin: 0.25rem 0;
+}
+
+.story-aside-content h5 {
+    font-size: 0.625rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+}
+
 
 /* *************************** */
 /* media queries */
@@ -287,6 +413,17 @@ header h2 {
 @media (min-width: 500px) {
     .hero-text h2 {
         font-size: 3rem;
+    }
+
+    .hero-tile-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .hero-tile div {
+        text-align: left;
     }
 }
 
@@ -301,6 +438,10 @@ header h2 {
     display: none;
   }
 
+  footer {
+    margin-bottom: 0;
+  }
+
   .wordmark-container h1 {
     font-size: 2rem; /* px equivalent 32px */
   }
@@ -312,6 +453,8 @@ header h2 {
   .hero-search-container form {
     flex-direction: row;
     align-items: flex-end;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .hero-search-container form div {
@@ -322,4 +465,36 @@ header h2 {
   .hero-search-container form button {
     min-height: 41px;
   }
+
+.story-section aside {
+    background-color: #F4F3F1;
+    color:#00120A;
+    flex-direction: row;
+}
+
+.story-section aside img {
+    max-height: 150px;
+    max-width: 150px;
+}
+
+.story-aside-content span,
+.story-aside-content h5 {
+    color: #785917;
+}
+
+@media (min-width: 1000px) {
+    .hero-tile-container {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .hero-tile {
+        min-width: 225px;
+    }
+
+    .story-container {
+        flex-direction: row;
+    }
+
 }
