@@ -22,7 +22,7 @@
             <!-- Logo SVG - make home link -->
             <span class="wordmark-container">
                 <h1>Emerald Escapes</h1>
-                <h2>Bespoke Irish Golf Travel Experiences</h2>
+                <h2 class="gold">Bespoke Irish Golf Travel Experiences</h2>
             </span>
             <nav class="main-navigation" aria-label="Main Navigation Top of Screen">
                 <!-- Navigation links go here desktop -->
@@ -31,10 +31,10 @@
                         <a href="./index.html" class="active-page">Home</a>
                     </li>
                     <li>
-                        <a href="./experiences.html">Experiences</a>
+                        <a href="./experiences/index.html">Experiences</a>
                     </li>
                     <li>
-                        <a href="./consultation.html">Bespoke Consultation</a>
+                        <a href="./consultation/index.html">Bespoke Consultation</a>
                     </li>
                 </ul>
             </nav>
@@ -42,8 +42,82 @@
     </header>
     <main>
         <!-- Hero section -->
-        <section>
-            
+        <section class="hero-section">
+            <div class="hero-image"></div>
+            <div class="hero-text">
+                <h2>Walk the Legendary Fairways of the</h2>
+                <h2 class="light-gold">Emerald Isle</h2>
+                <p> Bespoke golf itineraries, guaranteed tee times on Ireland's most iconic championship courses, chartered twin-engine helicopter transfers, and exclusive private castle estates.</p>
+                <div class="hero-search-container">
+                    <form>
+                        <div>
+                            <label for="destination">Destination/Region</label>
+                            <select class="hero-select" id="destination" name="destination">
+                                <option value="all">All Regions</option>
+                                <option value="dublin">Dublin</option>
+                                <option value="cork">Cork</option>
+                                <option value="galway">Galway</option>
+                                <option value="belfast">Belfast</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="season">Preferred Season</label>
+                            <select class="hero-select" id="season" name="season">
+                                <option value="all">All Seasons</option>
+                                <option value="spring">Spring</option>
+                                <option value="summer">Summer</option>
+                                <option value="autumn">Autumn</option>
+                                <option value="winter">Winter</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="golfers">Number of Golfers</label>
+                            <select class="hero-select" id="golfers" name="golfers">
+                                <option value="1-2">1-2</option>
+                                <option value="3-4">3-4</option>
+                                <option value="5-6">5-6</option>
+                                <option value="7-8">7-8</option>
+                                <option value="9+">9+</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button type="submit">Curate My Journey
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="hero-tile-container">
+                        <div class="hero-tile">
+                            <span class="material-symbols-outlined light-gold">verified</span>
+                            <div>
+                                <h5 class="light-gold">Guaranteed Tee Times</h5>
+                                <p>Old Head, RCD, Ballybunion</p>
+                            </div>
+                        </div>
+                        <div class="hero-tile">
+                            <span class="material-symbols-outlined light-gold">helicopter</span>
+                            <div>
+                                <h5 class="light-gold">Chartered Aviation</h5>
+                                <p>Direct Apron Rotor & Jet</p>
+                            </div>
+                        </div>
+                        <div class="hero-tile">
+                            <span class="material-symbols-outlined light-gold">workspace_premium</span>
+                            <div>
+                                <h5 class="light-gold">IGTOA Master Suite</h5>
+                                <p>Fully Accredited & Bonded</p>
+                            </div>
+                        </div>
+                        <div class="hero-tile">
+                            <span class="material-symbols-outlined light-gold">star</span>
+                            <div>
+                                <h5 class="light-gold">Audited</h5>
+                                <p>4.98 / 5 Rating</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         
         <!-- Story/History Section -->
@@ -82,13 +156,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="./consultation.html">
-                        <span class="material-symbols-outlined">calendar_month</span>Consult
+                    <a href="./experiences/index.html">
+                        <span class="material-symbols-outlined">travel_explore</span>Experiences
                     </a>
                 </li>
                 <li>
-                    <a href="./experiences.html">
-                        <span class="material-symbols-outlined">travel_explore</span>Experiences
+                    <a href="./consultation/index.html">
+                        <span class="material-symbols-outlined">calendar_month</span>Consult
                     </a>
                 </li>
             </ul>
