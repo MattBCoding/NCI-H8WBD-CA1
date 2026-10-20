@@ -490,7 +490,7 @@ footer {
       0.25rem,
       0.5rem
     );
-  flex: 0 0 85%;
+  flex: 0 0 min(85%, 400px);
   scroll-snap-align: start;
 }
 
@@ -683,4 +683,5 @@ footer {
   .story-container {
     flex-direction: row;
   }
+
 }
