@@ -444,6 +444,11 @@ footer {
   display: none;
 }
 
+.carousel-container:focus-visible {
+    outline: 2px solid #0b291e;
+    outline-offset: 2px;
+}
+
 .carousel-controls-container {
   position: absolute;
   bottom: 0rem;
