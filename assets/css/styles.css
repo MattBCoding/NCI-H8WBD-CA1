@@ -406,10 +406,154 @@ footer {
     letter-spacing: 0.05rem;
 }
 
+/* *************************** */
+/* Course Selection Section */
+/* *************************** */
+.course-selection-section {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #F4F3F1;
+}
+.course-selection-section > div:first-of-type {
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.course-selection-section h2 {
+    margin-right: 2rem;
+}
+
+.carousel-control {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    color: #0B291E;
+    border-radius: 15%;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 0.5rem;
+}
+
+.carousel-control:hover {
+    background-color:#F4F3F1;
+    border: 1px solid #0B291E;
+}
+
+.carousel-control > .material-symbols-outlined {
+    font-size: 1rem;
+}
+
+.carousel-controls-container {
+    position: absolute;
+    bottom: 0rem;
+    right: 0.5rem;
+}
+
+.carousel-slide {
+    background-color: #FFFFFF;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: minmax(0.25rem, 0.5rem) minmax(auto, 100%) minmax(0.25rem, 0.5rem);
+}
+
+.carousel-slide .center-column {
+    grid-column: 2;
+}
+
+.carousel-slide .full-width {
+    grid-column: 1 / -1;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.slide-image {
+    position: relative;
+}
+
+.slide-image span:first-of-type {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    background-color: #0B291E;
+    color: #FFFFFF;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.slide-image span:last-of-type {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    background-color: #FFDEA6;
+    color: #785917;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+}
+
+.slide-text h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 1rem 0;
+}
+
+.slide-text p {
+    font-size: 0.875rem;
+    font-weight: 300;
+    margin: 0.75rem 0;
+}
+
+.slide-details {
+    display: flex;
+    margin-top: 0.5rem;
+    border-top: 1px solid #CCCCCC;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.slide-details > div {
+    flex: 1;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.slide-details div:first-child {
+    border-right: 1px solid #CCCCCC;
+}
+
+.slide-details h5 {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0.25rem 0;
+}
+
+.slide-details p {
+    font-size: 0.75rem;
+    font-weight: 300;
+    margin: 0.25rem 0;
+}
+
 
 /* *************************** */
 /* media queries */
 /* *************************** */
+@media (min-width: 470px) {
+    .course-selection-section h2 {
+        margin-right: 6.5rem;
+    }
+}
+
 @media (min-width: 500px) {
     .hero-text h2 {
         font-size: 3rem;
