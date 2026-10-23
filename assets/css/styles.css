@@ -486,6 +486,7 @@ footer {
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: grid;
+  grid-template-rows: auto 1fr auto;
   grid-template-columns: minmax(0.25rem, 0.5rem) minmax(auto, 100%) minmax(
       0.25rem,
       0.5rem
@@ -503,9 +504,9 @@ footer {
 }
 
 .carousel-slide img {
+  display: block;
   width: 100%;
-  height: auto;
-  max-height: 224px;
+  height: 224px;
   object-fit: cover;
 }
 .slide-image {
@@ -526,7 +527,7 @@ footer {
 
 .slide-image span:last-of-type {
   position: absolute;
-  bottom: 0.7rem;
+  bottom: 0.5rem;
   right: 0.5rem;
   background-color: #ffdea6;
   color: #785917;
