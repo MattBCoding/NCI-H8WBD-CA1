@@ -581,6 +581,132 @@ footer {
 }
 
 /* *************************** */
+/* Course Selection Section */
+/* *************************** */
+.experience-selection-section {
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.experience-selection-section-header-text {
+    margin: 1rem 0;
+}
+
+.experience-container {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.experience-card {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-rows: auto 2fr 1fr auto;
+  grid-template-columns: minmax(0.25rem, 0.5rem) minmax(auto, 100%) minmax(
+      0.25rem,
+      0.5rem
+    );
+  max-width: min(85%, 400px);
+}
+
+.experience-card .center-column {
+  grid-column: 2;
+}
+
+.experience-card .full-width {
+  grid-column: 1 / -1;
+}
+
+.experience-card img {
+  display: block;
+  width: 100%;
+  height: 224px;
+  object-fit: cover;
+}
+.experience-card-image {
+  position: relative;
+}
+
+.experience-card-image span:first-of-type {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  background-color: #FFFFFF;
+  color: #000000;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+}
+
+.experience-card-text h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+
+.experience-card-text p {
+  font-size: 0.875rem;
+  font-weight: 300;
+  margin: 0.75rem 0;
+}
+
+.experience-card-text span.material-symbols-outlined.gold {
+  font-size: 0.875rem;
+}
+
+.experience-card-bullets p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.experience-card-details {
+  display: flex;
+  margin-top: 0.5rem;
+  border-top: 1px solid #cccccc;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.experience-card-details h5 {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0.25rem 0;
+}
+
+.experience-card-details p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0.25rem 0;
+}
+
+.experience-card-details .small-text {
+    font-size: 0.65rem;
+    font-weight: 300;
+}
+
+.experience-card-details > span {
+    align-self: center;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #000000;
+    padding: 0.25rem 1rem;
+    border-radius: 0.25rem;
+}
+
+
+/* *************************** */
 /* media queries */
 /* *************************** */
 
@@ -668,6 +794,14 @@ footer {
   .story-aside-content span,
   .story-aside-content h5 {
     color: #785917;
+  }
+
+  .experience-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    }
+  .experience-card {
+    flex: 1 1 380px;
   }
 }
 
