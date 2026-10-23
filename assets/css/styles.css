@@ -705,6 +705,51 @@ footer {
     border-radius: 0.25rem;
 }
 
+.experiences-section-footer {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    color: #FFFFFF;
+    margin-top: 2rem;
+    background: radial-gradient(circle, #0b291ef5 100%, #00120a 25%);
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experiences-section-footer h3 {
+    font-weight: 500;
+}
+.experiences-section-footer h2 {
+    font-weight: 400;
+    margin: 0 0 0.5rem 0;
+}
+
+.experiences-section-footer p {
+    font-weight: 200;
+    max-width: 784px;
+}
+
+.experiences-section-footer > button {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 0.75rem;
+    background-color:#785917;
+    color: #FFFFFF;
+    border: none;
+    padding: 1rem 3rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.experiences-section-footer > button > span {
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+}
+
 
 /* *************************** */
 /* media queries */
