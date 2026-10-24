@@ -918,6 +918,17 @@ footer form {
     text-transform: uppercase;
 }
 
+.protection-statement {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.protection-statement span {
+    font-size: 2rem;
+}
+
+
 /* *************************** */
 /* media queries */
 /* *************************** */
@@ -972,6 +983,13 @@ footer form {
   .footer-content > :nth-child(4) {
     grid-column: 1 / -1;
   }
+
+}
+
+@media (min-width: 563px) {
+    .protection-statement span {
+      font-size: 1rem;
+    }
 }
 
 @media (min-width: 700px) {
@@ -1075,6 +1093,10 @@ footer form {
     grid-column: 3;
     grid-row: 1 / span 2;
   }
+
+      .protection-statement span {
+      font-size: 2rem;
+    }
 }
 
 @media (min-width: 1000px) {
