@@ -710,11 +710,13 @@ footer {
     border-radius: 0.5rem;
     color: #FFFFFF;
     margin-top: 2rem;
-    background: radial-gradient(circle, #0b291ef5 100%, #00120a 25%);
+    background: radial-gradient(circle, #00120a 40%,#061d14 70%, #0b291e 100%);
     text-align: start;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
 }
 
 .experiences-section-footer h3 {
@@ -842,11 +844,15 @@ footer {
   }
 
   .experience-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+  }
   .experience-card {
-    flex: 1 1 380px;
+    max-width: none;
+  }
+  .experiences-section-footer {
+    flex-direction: row;;
   }
 }
 
@@ -865,4 +871,10 @@ footer {
     flex-direction: row;
   }
 
+}
+
+@media (min-width: 1300px) {
+  .experience-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
