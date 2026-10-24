@@ -58,8 +58,18 @@ h6 {
 
 .alternate-font-heading {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 700;
-  font-size: 0.875rem; /* px equivalent 14px */
+}
+
+.section-h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.section-h3 {
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
 }
 
@@ -325,11 +335,6 @@ footer {
   padding: 1rem;
 }
 
-.story-section h2 {
-  font-weight: 400;
-  font-size: 2rem; /* px equivalent 32px */
-  margin-bottom: 1.5rem;
-}
 .story-section p {
   margin-bottom: 0.75rem;
 }
@@ -445,8 +450,8 @@ footer {
 }
 
 .carousel-container:focus-visible {
-    outline: 2px solid #0b291e;
-    outline-offset: 2px;
+  outline: 2px solid #0b291e;
+  outline-offset: 2px;
 }
 
 .carousel-controls-container {
@@ -584,17 +589,17 @@ footer {
 /* Course Selection Section */
 /* *************************** */
 .experience-selection-section {
-    margin-top: 2rem;
-    padding: 1rem;
+  margin-top: 2rem;
+  padding: 1rem;
 }
 
 .experience-selection-section-header-text {
-    margin: 1rem 0;
+  margin: 1rem 0;
 }
 
 .experience-container {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
@@ -637,7 +642,7 @@ footer {
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #000000;
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
@@ -645,10 +650,14 @@ footer {
   letter-spacing: 0.1rem;
 }
 
+.experience-card-text h4 {
+    margin-top: 1rem;
+}
+
 .experience-card-text h3 {
   font-size: 1.25rem;
   font-weight: 400;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
 }
 
 .experience-card-text p {
@@ -691,67 +700,118 @@ footer {
 }
 
 .experience-card-details .small-text {
-    font-size: 0.65rem;
-    font-weight: 300;
+  font-size: 0.65rem;
+  font-weight: 300;
 }
 
 .experience-card-details > span {
-    align-self: center;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    background-color: #000000;
-    padding: 0.25rem 1rem;
-    border-radius: 0.25rem;
+  align-self: center;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #000000;
+  padding: 0.25rem 1rem;
+  border-radius: 0.25rem;
 }
 
 .experiences-section-footer {
-    padding: 2rem;
-    border-radius: 0.5rem;
-    color: #FFFFFF;
-    margin-top: 2rem;
-    background: radial-gradient(circle, #00120a 40%,#061d14 70%, #0b291e 100%);
-    text-align: start;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: radial-gradient(circle, #00120a 40%, #061d14 70%, #0b291e 100%);
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 
 .experiences-section-footer h3 {
-    font-weight: 500;
+  font-weight: 500;
 }
 .experiences-section-footer h2 {
-    font-weight: 400;
-    margin: 0 0 0.5rem 0;
+  font-weight: 400;
+  margin: 0 0 0.5rem 0;
 }
 
 .experiences-section-footer p {
-    font-weight: 200;
-    max-width: 784px;
+  font-weight: 200;
+  max-width: 784px;
 }
 
 .experiences-section-footer > button {
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 0.75rem;
-    background-color:#785917;
-    color: #FFFFFF;
-    border: none;
-    padding: 1rem 3rem;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.75rem;
+  background-color: #785917;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .experiences-section-footer > button > span {
-    font-size: 0.75rem;
-    margin-left: 0.5rem;
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
 }
 
+/* *************************** */
+/* Values Section */
+/* *************************** */
+.values-section {
+  background-color: #f4f3f1;
+  padding: 2rem;
+}
+
+.values-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+/* container and card are both grid containers so applying subgrid means they both share the same row tracks, keeping the rows aligned across cards */
+/* span 4 results in the card occupying 4 row tracks of the parent grid - it spans across 4 rows. */
+.value-card {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: grid;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
+  row-gap: 0;
+}
+
+.value-card > span {
+  background-color: #f4f3f1;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.value-card h4 {
+    margin-top: 0.5rem;
+  text-transform: none;
+  font-size: 1rem;
+}
+
+.value-card p {
+    margin-top: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.value-card > h5 {
+  border-top: 1px solid #cccccc;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
 
 /* *************************** */
 /* media queries */
@@ -786,6 +846,10 @@ footer {
 
   .hero-tile div {
     text-align: left;
+  }
+
+    .values-container {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -852,7 +916,10 @@ footer {
     max-width: none;
   }
   .experiences-section-footer {
-    flex-direction: row;;
+    flex-direction: row;
+  }
+  .values-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
@@ -870,7 +937,6 @@ footer {
   .story-container {
     flex-direction: row;
   }
-
 }
 
 @media (min-width: 1300px) {
