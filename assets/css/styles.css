@@ -129,11 +129,6 @@ header h1 {
 /* desktop navigation */
 
 /* mobile navigation */
-
-footer {
-  margin-bottom: 4rem; /* forces space for the fixed mobile navigation */
-}
-
 .mobile-navigation {
   position: fixed;
   bottom: 0;
@@ -881,13 +876,14 @@ footer {
 
 footer {
     background-color: #f4f3f1;
-    padding: 2rem;
+    padding: 0 2rem;
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+    padding-bottom: 5rem;
 }
 
 .footer-links {
