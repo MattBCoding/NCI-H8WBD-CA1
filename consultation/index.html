@@ -8,6 +8,7 @@
     <title>Emerald Escapes</title>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <script src="../assets/js/currency.js" defer></script>
     <script src="./assets/js/consultation-script.js" defer></script>
 </head>
 <body>
@@ -15,7 +16,12 @@
         <!-- container bar above main nav and logo heading-->
         <div class="header-row-one">
             <!-- Currency Selector -->
-            <span>Currency</span>
+            <label for="currency-select" class="visually-hidden">Currency</label>
+            <select id="currency-select" name="currency">
+              <option value="EUR">€ EUR</option>
+              <option value="USD">$ USD</option>
+              <option value="GBP">£ GBP</option>
+            </select>
         </div>
         <!-- main logo and navigation container -->
         <div class="header-row-two">

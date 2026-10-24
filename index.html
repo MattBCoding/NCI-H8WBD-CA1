@@ -14,6 +14,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script src="./assets/js/currency.js" defer></script>
     <script src="./assets/js/home-script.js" defer></script>
   </head>
   <body>
@@ -22,7 +23,12 @@
         <!-- container bar above main nav and logo heading-->
         <div class="header-row-one">
           <!-- Currency Selector -->
-          <span>Currency</span>
+          <label for="currency-select" class="visually-hidden">Currency</label>
+          <select id="currency-select" name="currency">
+            <option value="EUR">€ EUR</option>
+            <option value="USD">$ USD</option>
+            <option value="GBP">£ GBP</option>
+          </select>
         </div>
         <!-- main logo and navigation container -->
         <div class="header-row-two">
@@ -785,7 +791,7 @@
               <div class="experience-card-details center-column">
                 <div>
                   <h5 class="alternate-font-heading">From</h5>
-                  <p>€14,800<span class="small-text"> / guest</span></p>
+                  <p><span data-price-eur="14800">€14,800</span><span class="small-text"> / guest</span></p>
                 </div>
                 <span>Inquire</span>
               </div>
@@ -825,7 +831,7 @@
               <div class="experience-card-details center-column">
                 <div>
                   <h5 class="alternate-font-heading">From</h5>
-                  <p>€16,900<span class="small-text"> / guest</span></p>
+                  <p><span data-price-eur="16900">€16,900</span><span class="small-text"> / guest</span></p>
                 </div>
                 <span>Inquire</span>
               </div>
@@ -865,7 +871,7 @@
               <div class="experience-card-details center-column">
                 <div>
                   <h5 class="alternate-font-heading">From</h5>
-                  <p>€14,800<span class="small-text"> / guest</span></p>
+                  <p><span data-price-eur="14800">€14,800</span><span class="small-text"> / guest</span></p>
                 </div>
                 <span>Inquire</span>
               </div>
@@ -905,7 +911,7 @@
               <div class="experience-card-details center-column">
                 <div>
                   <h5 class="alternate-font-heading">From</h5>
-                  <p>€6,400<span class="small-text"> / guest</span></p>
+                  <p><span data-price-eur="6400">€6,400</span><span class="small-text"> / guest</span></p>
                 </div>
                 <span>Inquire</span>
               </div>
