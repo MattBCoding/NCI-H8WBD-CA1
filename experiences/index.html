@@ -1,106 +1,236 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Matthew Bodden">
-    <meta name="description" content="Emerald Escapes - Your gateway to luxurious and serene Irish golf travel experiences.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Matthew Bodden" />
+    <meta
+      name="description"
+      content="Emerald Escapes - Your gateway to luxurious and serene Irish golf travel experiences."
+    />
     <title>Emerald Escapes</title>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <script src="../assets/js/currency.js" defer></script>
-    <script src="./assets/js/experiences-script.js" defer></script>
-</head>
-<body>
-    <header>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script src="../assets/js/shared.js" defer></script>
+    <script src="../assets/js/experiences-script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-container">
+      <header>
         <!-- container bar above main nav and logo heading-->
         <div class="header-row-one">
-            <!-- Currency Selector -->
-            <label for="currency-select" class="visually-hidden">Currency</label>
+          <!-- telephone link -->
+          <div class="telephone-link-container">
+            <a href="tel:+35310000000" aria-label="Call Private Client Desk">
+              <span class="material-symbols-outlined gold" aria-hidden="true"
+                >call</span
+              >
+              <span class="call-label">Call</span>
+              <span class="phone-label">Private Client Desk</span>
+              <span class="phone-number">: +353 (0)1 000 0000</span>
+            </a>
+          </div>
+
+          <!-- Current time -->
+          <div class="current-time-container">
+            <span class="material-symbols-outlined gold">schedule</span>
+            <span id="current-time"></span>
+          </div>
+          <!-- Currency Selector -->
+          <div class="currency-selector-container">
+            <span class="material-symbols-outlined gold"
+              >currency_exchange</span
+            >
+            <label for="currency-select" class="visually-hidden"
+              >Currency</label
+            >
             <select id="currency-select" name="currency">
               <option value="EUR">€ EUR</option>
               <option value="USD">$ USD</option>
               <option value="GBP">£ GBP</option>
             </select>
+          </div>
         </div>
         <!-- main logo and navigation container -->
         <div class="header-row-two">
-            <!-- Logo SVG - make home link -->
-            <span class="wordmark-container">
-                <h1>Emerald Escapes</h1>
-                <h2>Bespoke Irish Golf Travel Experiences</h2>
-            </span>
-            <nav class="main-navigation" aria-label="Main Navigation Top of Screen">
-                <!-- Navigation links go here desktop -->
-                 <ul>
-                    <li>
-                        <a href="../index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="./index.html" class="active-page">Experiences</a>
-                    </li>
-                    <li>
-                        <a href="../consultation/index.html">Bespoke Consultation</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <!-- Hero section -->
-        <section>
-
-        </section>
-        
-        <!-- Story/History Section -->
-        <section>
-            <aside>
-                <!-- Founder quote -->
-            </aside>
-        </section>
-
-        <!-- Championship Links Courses Section-->
-        <section>
-
-        </section>
-
-        <!-- Example Experiences Section -->
-        <section>
-
-        </section>
-
-        <!-- Company Values/Principles Section -->
-        <section>
-
-        </section>
-    </main>
-
-    <footer>
-        <!-- Footer content goes here -->
-
-        <!-- Mobile Nav -->
-         <nav class="mobile-navigation" aria-label="Mobile Navigation Bottom of Screen">
+          <!-- Logo SVG - make home link -->
+          <span class="wordmark-container">
+            <h1>Emerald Escapes</h1>
+            <h2 class="gold alternate-font-heading">
+              Bespoke Irish Golf Travel Experiences
+            </h2>
+          </span>
+          <nav
+            class="main-navigation"
+            aria-label="Main Navigation Top of Screen"
+          >
+            <!-- Navigation links go here desktop -->
             <ul>
-                <!-- Navigation links go here mobile -->
-                <li>
-                    <a href="../index.html">
-                        <span class="material-symbols-outlined">golf_course</span>Home
-                    </a>
-                </li>
-                <li>
-                    <a href="../consultation/index.html">
-                        <span class="material-symbols-outlined">calendar_month</span>Consult
-                    </a>
-                </li>
-                <li>
-                    <a href="./index.html" class="active-page">
-                        <span class="material-symbols-outlined">travel_explore</span>Experiences
-                    </a>
-                </li>
+              <li>
+                <a href="../index.html">Home</a>
+              </li>
+              <li>
+                <a href="./index.html" class="active-page">Experiences</a>
+              </li>
+              <li>
+                <a href="../consultation/index.html">Bespoke Consultation</a>
+              </li>
             </ul>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <!-- Experiences Hero Section -->
+        <section></section>
+        <!-- Example Experiences Section with Search -->
+        <section>
+          <!-- Search bar for experiences -->
+          <div class="search-container"></div>
+          <!-- Search Results or full example experiences go here -->
+          <div class="search-results"></div>
+        </section>
+        <!-- Call to action section-->
+        <section class="call-to-action-section">
+          <div>
+            <h3 class="light-gold alternate-font-heading section-h3">
+              Your Journey Awaits
+            </h3>
+            <h2 class="section-h2">Begin Your Irish Odyssey</h2>
+            <p>
+              Slots for the 2027 championship ballot season are rigorously
+              limited. Secure your place early by contacting our Private Client
+              desk to ensure an unforgettable experience.
+            </p>
+          </div>
+          <div class="call-to-action-btn-container">
+            <button>
+              Request Bespoke Consultation
+              <span class="material-symbols-outlined">send</span>
+            </button>
+            <button>
+              Explore Experiences
+              <span class="material-symbols-outlined">explore</span>
+            </button>
+          </div>
+          <h3 class="alternate-font-heading section-h3">
+            Confidential Private Client Desk &bull; Guaranteed Ballots &bull;
+            Helicopter or Chauffeur Luxury Travel
+          </h3>
+        </section>
+      </main>
+
+      <footer>
+        <!-- Footer content goes here -->
+        <div class="footer-content">
+          <div>
+            <h2>Emerald Escapes</h2>
+            <p>
+              Curators of ultra-exclusive bespoke Irish golfing experiences.
+              Play the finest courses in the world whilst staying at private
+              estate residences and indulging in unparalleled luxury. Our
+              dedicated team ensures every detail is meticulously crafted for an
+              extraordinary journey.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h3 class="gold alternate-font-heading section-h3">
+              Curated Routes
+            </h3>
+            <a href="../index.html">Explore Experiences</a>
+            <a href="./index.html">Explore Experiences</a>
+            <a href="./index.html">Explore Experiences</a>
+            <a href="./index.html">Explore Experiences</a>
+          </div>
+          <div class="footer-links">
+            <h3 class="gold alternate-font-heading section-h3">The Heritage</h3>
+            <a href="./consultation/index.html">Request Consultation</a>
+            <a href="./consultation/index.html">Request Consultation</a>
+            <a href="./consultation/index.html">Request Consultation</a>
+            <a href="./consultation/index.html">Request Consultation</a>
+          </div>
+          <div>
+            <h3 class="gold alternate-font-heading section-h3">
+              Private Ballot Dispatch
+            </h3>
+            <p>
+              Receive confidential briefings on released tee times, private
+              estate openings, and exclusive golfing opportunities.
+            </p>
+            <form id="newsletter-form">
+              <label for="footer-email" class="visually-hidden"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                id="footer-email"
+                name="email"
+                placeholder="name@domain.com"
+                autocomplete="email"
+                maxlength="254"
+                required
+              />
+              <button id="footer-subscribe-btn" type="submit">Subscribe</button>
+            </form>
+            <div class="protection-statement">
+              <span class="material-symbols-outlined gold"
+                >enhanced_encryption</span
+              >
+              <p>
+                Compliant with strict data protection and privacy regulations.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Mobile Nav -->
+        <nav
+          class="mobile-navigation"
+          aria-label="Mobile Navigation Bottom of Screen"
+        >
+          <ul>
+            <!-- Navigation links go here mobile -->
+            <li>
+              <a href="../index.html">
+                <span class="material-symbols-outlined">golf_course</span>Home
+              </a>
+            </li>
+            <li>
+              <a href="../experiences/index.html" class="active-page">
+                <span class="material-symbols-outlined">travel_explore</span
+                >Experiences
+              </a>
+            </li>
+            <li>
+              <a href="../consultation/index.html">
+                <span class="material-symbols-outlined">calendar_month</span
+                >Consult
+              </a>
+            </li>
+          </ul>
         </nav>
-    </footer>
-
-
-</body>
+        <!-- Newsletter confirmation modal -->
+        <dialog
+          id="newsletter-modal"
+          class="newsletter-modal"
+          aria-labelledby="newsletter-modal-title"
+        >
+          <div class="newsletter-modal-content">
+            <span class="material-symbols-outlined gold" aria-hidden="true"
+              >mark_email_read</span
+            >
+            <h3 id="newsletter-modal-title">Thank You</h3>
+            <p>
+              You have been added to the Private Ballot Dispatch mailing list.
+              Watch your inbox for our next confidential briefing.
+            </p>
+            <button type="button" id="newsletter-modal-close" autofocus>
+              Close
+            </button>
+          </div>
+        </dialog>
+      </footer>
+    </div>
+  </body>
 </html>
