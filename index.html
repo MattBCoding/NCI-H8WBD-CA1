@@ -22,6 +22,8 @@
       <header>
         <!-- container bar above main nav and logo heading-->
         <div class="header-row-one">
+          <!-- telephone link -->
+          <!-- Current time -->
           <!-- Currency Selector -->
           <label for="currency-select" class="visually-hidden">Currency</label>
           <select id="currency-select" name="currency">
@@ -791,7 +793,10 @@
               <div class="experience-card-details center-column">
                 <div>
                   <h5 class="alternate-font-heading">From</h5>
-                  <p><span data-price-eur="14800">€14,800</span><span class="small-text"> / guest</span></p>
+                  <p>
+                    <span data-price-eur="14800">€14,800</span
+                    ><span class="small-text"> / guest</span>
+                  </p>
                 </div>
                 <span>Inquire</span>
               </div>
@@ -831,7 +836,10 @@
               <div class="experience-card-details center-column">
                 <div>
                   <h5 class="alternate-font-heading">From</h5>
-                  <p><span data-price-eur="16900">€16,900</span><span class="small-text"> / guest</span></p>
+                  <p>
+                    <span data-price-eur="16900">€16,900</span
+                    ><span class="small-text"> / guest</span>
+                  </p>
                 </div>
                 <span>Inquire</span>
               </div>
@@ -871,7 +879,10 @@
               <div class="experience-card-details center-column">
                 <div>
                   <h5 class="alternate-font-heading">From</h5>
-                  <p><span data-price-eur="14800">€14,800</span><span class="small-text"> / guest</span></p>
+                  <p>
+                    <span data-price-eur="14800">€14,800</span
+                    ><span class="small-text"> / guest</span>
+                  </p>
                 </div>
                 <span>Inquire</span>
               </div>
@@ -911,7 +922,10 @@
               <div class="experience-card-details center-column">
                 <div>
                   <h5 class="alternate-font-heading">From</h5>
-                  <p><span data-price-eur="6400">€6,400</span><span class="small-text"> / guest</span></p>
+                  <p>
+                    <span data-price-eur="6400">€6,400</span
+                    ><span class="small-text"> / guest</span>
+                  </p>
                 </div>
                 <span>Inquire</span>
               </div>
@@ -1076,7 +1090,7 @@
               Receive confidential briefings on released tee times, private
               estate openings, and exclusive golfing opportunities.
             </p>
-            <form>
+            <form id="newsletter-form">
               <label for="footer-email" class="visually-hidden"
                 >Email Address</label
               >
@@ -1086,13 +1100,18 @@
                 name="email"
                 placeholder="name@domain.com"
                 autocomplete="email"
+                maxlength="254"
                 required
               />
               <button id="footer-subscribe-btn" type="submit">Subscribe</button>
             </form>
             <div class="protection-statement">
-                <span class="material-symbols-outlined gold">enhanced_encryption</span>
-                <p>Compliant with strict data protection and privacy regulations.</p>
+              <span class="material-symbols-outlined gold"
+                >enhanced_encryption</span
+              >
+              <p>
+                Compliant with strict data protection and privacy regulations.
+              </p>
             </div>
           </div>
         </div>
@@ -1122,6 +1141,26 @@
             </li>
           </ul>
         </nav>
+        <!-- Newsletter confirmation modal -->
+        <dialog
+          id="newsletter-modal"
+          class="newsletter-modal"
+          aria-labelledby="newsletter-modal-title"
+        >
+          <div class="newsletter-modal-content">
+            <span class="material-symbols-outlined gold" aria-hidden="true"
+              >mark_email_read</span
+            >
+            <h3 id="newsletter-modal-title">Thank You</h3>
+            <p>
+              You have been added to the Private Ballot Dispatch mailing list.
+              Watch your inbox for our next confidential briefing.
+            </p>
+            <button type="button" id="newsletter-modal-close" autofocus>
+              Close
+            </button>
+          </div>
+        </dialog>
       </footer>
     </div>
   </body>
