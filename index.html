@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <script src="./assets/js/currency.js" defer></script>
+    <script src="./assets/js/shared.js" defer></script>
     <script src="./assets/js/home-script.js" defer></script>
   </head>
   <body>
@@ -23,14 +23,31 @@
         <!-- container bar above main nav and logo heading-->
         <div class="header-row-one">
           <!-- telephone link -->
+          <div class="telephone-link-container">
+            
+            <a href="tel:+35310000000" aria-label="Call Private Client Desk">
+                <span class="material-symbols-outlined gold" aria-hidden="true">call</span>
+                <span class="call-label">Call</span>
+                <span class="phone-label">Private Client Desk</span>
+                <span class="phone-number">: +353 (0)1 000 0000</span>
+            </a>
+          </div>
+ 
           <!-- Current time -->
+          <div class="current-time-container">
+            <span class="material-symbols-outlined gold">schedule</span>
+            <span id="current-time"></span>
+          </div>
           <!-- Currency Selector -->
-          <label for="currency-select" class="visually-hidden">Currency</label>
-          <select id="currency-select" name="currency">
-            <option value="EUR">€ EUR</option>
-            <option value="USD">$ USD</option>
-            <option value="GBP">£ GBP</option>
-          </select>
+           <div class="currency-selector-container">
+                <span class="material-symbols-outlined gold">currency_exchange</span>
+                <label for="currency-select" class="visually-hidden">Currency</label>
+                <select id="currency-select" name="currency">
+                  <option value="EUR">€ EUR</option>
+                  <option value="USD">$ USD</option>
+                  <option value="GBP">£ GBP</option>
+                </select>
+           </div>
         </div>
         <!-- main logo and navigation container -->
         <div class="header-row-two">

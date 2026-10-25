@@ -145,3 +145,26 @@ if (currencySelect) {
 if (activeCurrency !== DEFAULT_CURRENCY) {
     refreshRates().then(() => applyCurrency(currencySelect ? currencySelect.value : activeCurrency));
 }
+
+
+// show the current time in Ireland in the top bar, refreshed each minute
+const currentTime = document.getElementById("current-time");
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
+const irishTimeFormat = new Intl.DateTimeFormat("en-IE", {
+  hour: "2-digit",
+  minute: "2-digit",
+  hour12: false,
+  timeZone: "Europe/Dublin", // handles daylight saving automatically
+//   timeZoneName: "short",
+});
+
+function updateCurrentTime() {
+  const now = new Date();
+  currentTime.textContent = `Dublin ${irishTimeFormat.format(now)}`;
+  // schedule the next update for the start of the next minute so the display never lags
+  setTimeout(updateCurrentTime, (60 - now.getSeconds()) * 1000 - now.getMilliseconds());
+}
+
+if (currentTime) {
+  updateCurrentTime();
+}
