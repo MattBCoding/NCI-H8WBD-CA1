@@ -13,6 +13,11 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tom-select@2.6.2/dist/css/tom-select.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.6.2/dist/js/tom-select.complete.min.js"></script>
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <script src="../assets/js/shared.js" defer></script>
     <script src="../assets/js/experiences-script.js" defer></script>
@@ -83,17 +88,59 @@
         </div>
       </header>
       <main>
-        <!-- Experiences Hero Section -->
-        <section></section>
-        <!-- Example Experiences Section with Search -->
         <section>
-          <!-- Search bar for experiences -->
-          <div class="search-container"></div>
+          <div class="search-intro-container">
+            <div>
+              <h2>Tailored Experiences & Example Itineraries</h2>
+              <p>
+                Here at Emerald Escapes, we deal exclusively with discerning
+                golfers seeking bespoke itineraries for their unforgettable
+                irish golfing adventure. The packages below show prior
+                itineraries we have organised for past parties. They are here to
+                serve as inspiration for your own golfing adventure.
+              </p>
+            </div>
+            <!-- Search bar for experiences -->
+            <div class="search-container">
+              <h4>Filter Itineraries</h4>
+              <div>
+                <select
+                  id="select-state"
+                  name="state[]"
+                  multiple
+                  placeholder="Search or select courses..."
+                  autocomplete="off"
+                >
+                  <option value="adare-manor">Adare Manor</option>
+                  <option value="ballybunion">Ballybunion</option>
+                  <option value="ballyliffin">Ballyliffin</option>
+                  <option value="brittas-bay">Brittas Bay</option>
+                  <option value="carne">Carne</option>
+                  <option value="county-sligo">County Sligo</option>
+                  <option value="k-club">K Club</option>
+                  <option value="lahinch">Lahinch</option>
+                  <option value="old-head">Old Head</option>
+                  <option value="portstewart">Portstewart</option>
+                  <option value="portmarnock">Portmarnock</option>
+                  <option value="royal-county-down">Royal County Down</option>
+                  <option value="royal-portrush">Royal Portrush</option>
+                  <option value="st-patricks-links">St. Patrick's Links</option>
+                  <option value="tralee">Tralee</option>
+                  <option value="waterville">Waterville</option>
+                </select>
+              </div>
+              <div class="card-total gold">
+                Displaying <span id="card-number">15</span> results
+              </div>
+            </div>
+          </div>
           <!-- Search Results or full example experiences go here -->
           <div class="search-results">
-
             <!-- Slide 1 -->
-            <div class="search-results-card">
+            <div
+              class="search-results-card"
+              data-category="old-head lahinch adare-manor tralee ballybunion waterville"
+            >
               <div class="search-results-card-image full-width">
                 <img
                   src="../assets/images/old-head-h4.jpg"
@@ -112,25 +159,25 @@
               </div>
               <div class="search-results-summary center-column">
                 <div>
-                    <span>Bases</span>
-                    Adare Manor<br>Ballybunion
+                  <span>Bases</span>
+                  Adare Manor<br />Ballybunion
                 </div>
                 <div>
-                    <span>Courses</span>
-                    Old Head<br>Lahinch<br>Adare Manor<br>Tralee<br>Ballybunion<br>Waterville
+                  <span>Courses</span>
+                  Old Head<br />Lahinch<br />Adare Manor<br />Tralee<br />Ballybunion<br />Waterville
                 </div>
                 <div>
-                    <span>Transport</span>
-                    <span class="material-symbols-outlined gold">helicopter</span>
+                  <span>Transport</span>
+                  <span class="material-symbols-outlined gold">helicopter</span>
                 </div>
               </div>
               <div
                 class="search-results-card-text center-column experience-card-bullets"
               >
-              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-              <p>D1-2: Adare Manor & Lahinch</p>
-              <p>D3-4: Old Head & Waterville</p>
-              <p>D5-6: Ballybunion & Tralee</p>
+                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+                <p>D1-2: Adare Manor & Lahinch</p>
+                <p>D3-4: Old Head & Waterville</p>
+                <p>D5-6: Ballybunion & Tralee</p>
                 <p>
                   <span class="material-symbols-outlined gold">verified</span
                   >Guaranteed tee time allocation
@@ -153,7 +200,10 @@
             </div>
 
             <!-- Slide 2 -->
-            <div class="search-results-card">
+            <div
+              class="search-results-card"
+              data-category="lahinch adare-manor tralee ballybunion"
+            >
               <div class="search-results-card-image full-width">
                 <img
                   src="../assets/images/golf-at-adare-manor-38-801x447.jpg"
@@ -172,26 +222,28 @@
               </div>
               <div class="search-results-summary center-column">
                 <div>
-                    <span>Bases</span>
-                    Adare Manor
+                  <span>Bases</span>
+                  Adare Manor
                 </div>
                 <div>
-                    <span>Courses</span>
-                    Adare Manor<br>Ballybunion<br>Tralee<br>Lahinch
+                  <span>Courses</span>
+                  Adare Manor<br />Ballybunion<br />Tralee<br />Lahinch
                 </div>
                 <div>
-                    <span>Transport</span>
-                    <span class="material-symbols-outlined gold">helicopter</span>
-                    <span class="material-symbols-outlined gold">airport_shuttle</span>
+                  <span>Transport</span>
+                  <span class="material-symbols-outlined gold">helicopter</span>
+                  <span class="material-symbols-outlined gold"
+                    >airport_shuttle</span
+                  >
                 </div>
               </div>
               <div
                 class="search-results-card-text center-column experience-card-bullets"
               >
-              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-              <p>D1-2: Adare Manor & Ballybunion</p>
-              <p>D3: Adare Manor</p>
-              <p>D4-5: Tralee & Lahinch</p>
+                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+                <p>D1-2: Adare Manor & Ballybunion</p>
+                <p>D3: Adare Manor</p>
+                <p>D4-5: Tralee & Lahinch</p>
                 <p>
                   <span class="material-symbols-outlined gold">verified</span
                   >Guaranteed tee time allocation
@@ -214,7 +266,10 @@
             </div>
 
             <!-- Slide 3 -->
-            <div class="search-results-card">
+            <div
+              class="search-results-card"
+              data-category="royal-portrush portstewart royal-county-down"
+            >
               <div class="search-results-card-image full-width">
                 <img
                   src="../assets/images/royal-county-down.jpg"
@@ -233,26 +288,28 @@
               </div>
               <div class="search-results-summary center-column">
                 <div>
-                    <span>Bases</span>
-                    Bushmills Inn<br>Slieve Donard
+                  <span>Bases</span>
+                  Bushmills Inn<br />Slieve Donard
                 </div>
                 <div>
-                    <span>Courses</span>
-                    Royal Portrush<br>Portstewart<br>Royal County Down
+                  <span>Courses</span>
+                  Royal Portrush<br />Portstewart<br />Royal County Down
                 </div>
                 <div>
-                    <span>Transport</span>
-                    <span class="material-symbols-outlined gold">helicopter</span>
-                    <span class="material-symbols-outlined gold">airport_shuttle</span>
+                  <span>Transport</span>
+                  <span class="material-symbols-outlined gold">helicopter</span>
+                  <span class="material-symbols-outlined gold"
+                    >airport_shuttle</span
+                  >
                 </div>
               </div>
               <div
                 class="search-results-card-text center-column experience-card-bullets"
               >
-              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-              <p>D1: Royal Portrush</p>
-              <p>D2: Portstewart</p>
-              <p>D3: Royal County Down</p>
+                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+                <p>D1: Royal Portrush</p>
+                <p>D2: Portstewart</p>
+                <p>D3: Royal County Down</p>
                 <p>
                   <span class="material-symbols-outlined gold">verified</span
                   >Unique Whiskey Experience
@@ -275,7 +332,10 @@
             </div>
 
             <!-- Slide 4 -->
-            <div class="search-results-card">
+            <div
+              class="search-results-card"
+              data-category="st-patricks-links ballyliffin"
+            >
               <div class="search-results-card-image full-width">
                 <img
                   src="../assets/images/st-patricks-links.png"
@@ -294,26 +354,28 @@
               </div>
               <div class="search-results-summary center-column">
                 <div>
-                    <span>Bases</span>
-                    Rosapenna Hotel & Golf Resort
+                  <span>Bases</span>
+                  Rosapenna Hotel & Golf Resort
                 </div>
                 <div>
-                    <span>Courses</span>
-                    St. Patrick's Links<br>Ballyliffin Golf Club Glashedy
+                  <span>Courses</span>
+                  St. Patrick's Links<br />Ballyliffin Golf Club Glashedy
                 </div>
                 <div>
-                    <span>Transport</span>
-                    <span class="material-symbols-outlined gold">helicopter</span>
-                    <span class="material-symbols-outlined gold">airport_shuttle</span>
+                  <span>Transport</span>
+                  <span class="material-symbols-outlined gold">helicopter</span>
+                  <span class="material-symbols-outlined gold"
+                    >airport_shuttle</span
+                  >
                 </div>
               </div>
               <div
                 class="search-results-card-text center-column experience-card-bullets"
               >
-              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-              <p>D1: St. Patrick's Links</p>
-              <p>D2: Ballyliffin Golf Club Glashedy</p>
-              <p>D3: Rosapenna Hotel & Golf Resort</p>
+                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+                <p>D1: St. Patrick's Links</p>
+                <p>D2: Ballyliffin Golf Club Glashedy</p>
+                <p>D3: Rosapenna Hotel & Golf Resort</p>
                 <p>
                   <span class="material-symbols-outlined gold">verified</span
                   >Guaranteed tee time allocation
@@ -336,7 +398,10 @@
             </div>
 
             <!-- Slide 5 -->
-            <div class="search-results-card">
+            <div
+              class="search-results-card"
+              data-category="portmarnock brittas-bay k-club"
+            >
               <div class="search-results-card-image full-width">
                 <img
                   src="../assets/images/portmarnock2.jpg"
@@ -355,25 +420,27 @@
               </div>
               <div class="search-results-summary center-column">
                 <div>
-                    <span>Bases</span>
-                    Merrion Hotel, Dublin
+                  <span>Bases</span>
+                  Merrion Hotel, Dublin
                 </div>
                 <div>
-                    <span>Courses</span>
-                    Portmarnock<br>Brittas Bay<br>K-Club
+                  <span>Courses</span>
+                  Portmarnock<br />Brittas Bay<br />K-Club
                 </div>
                 <div>
-                    <span>Transport</span>
-                    <span class="material-symbols-outlined gold">airport_shuttle</span>
+                  <span>Transport</span>
+                  <span class="material-symbols-outlined gold"
+                    >airport_shuttle</span
+                  >
                 </div>
               </div>
               <div
                 class="search-results-card-text center-column experience-card-bullets"
               >
-              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-              <p>D1: Portmarnock</p>
-              <p>D2: Brittas Bay</p>
-              <p>D3: K-Club</p>
+                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+                <p>D1: Portmarnock</p>
+                <p>D2: Brittas Bay</p>
+                <p>D3: K-Club</p>
                 <p>
                   <span class="material-symbols-outlined gold">verified</span
                   >Championship Courses
@@ -396,7 +463,7 @@
             </div>
 
             <!-- Slide 6 -->
-            <div class="search-results-card">
+            <div class="search-results-card" data-category="carne county-sligo">
               <div class="search-results-card-image full-width">
                 <img
                   src="../assets/images/Carne-2023-HR-4-scaled.jpg"
@@ -415,24 +482,24 @@
               </div>
               <div class="search-results-summary center-column">
                 <div>
-                    <span>Bases</span>
-                    Mount Falcon Estate
+                  <span>Bases</span>
+                  Mount Falcon Estate
                 </div>
                 <div>
-                    <span>Courses</span>
-                    Carne<br>County Sligo Golf Club
+                  <span>Courses</span>
+                  Carne<br />County Sligo Golf Club
                 </div>
                 <div>
-                    <span>Transport</span>
-                    <span class="material-symbols-outlined gold">helicopter</span>
+                  <span>Transport</span>
+                  <span class="material-symbols-outlined gold">helicopter</span>
                 </div>
               </div>
               <div
                 class="search-results-card-text center-column experience-card-bullets"
               >
-              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-              <p>D1: Carne</p>
-              <p>D2: County Sligo Golf Club</p>
+                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+                <p>D1: Carne</p>
+                <p>D2: County Sligo Golf Club</p>
                 <p>
                   <span class="material-symbols-outlined gold">verified</span
                   >Weekend Break
@@ -455,7 +522,10 @@
             </div>
 
             <!-- Slide 7 -->
-            <div class="search-results-card">
+            <div
+              class="search-results-card"
+              data-category="tralee ballybunion waterville"
+            >
               <div class="search-results-card-image full-width">
                 <img
                   src="../assets/images/Waterville-35-scaled.jpg"
@@ -474,26 +544,28 @@
               </div>
               <div class="search-results-summary center-column">
                 <div>
-                    <span>Bases</span>
-                    The Europe Hotel & Resort
+                  <span>Bases</span>
+                  The Europe Hotel & Resort
                 </div>
                 <div>
-                    <span>Courses</span>
-                    Tralee<br>Ballybunion<br>Waterville
+                  <span>Courses</span>
+                  Tralee<br />Ballybunion<br />Waterville
                 </div>
                 <div>
-                    <span>Transport</span>
-                    <span class="material-symbols-outlined gold">helicopter</span>
-                    <span class="material-symbols-outlined gold">airport_shuttle</span>
+                  <span>Transport</span>
+                  <span class="material-symbols-outlined gold">helicopter</span>
+                  <span class="material-symbols-outlined gold"
+                    >airport_shuttle</span
+                  >
                 </div>
               </div>
               <div
                 class="search-results-card-text center-column experience-card-bullets"
               >
-              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-              <p>D1-2: Waterville</p>
-              <p>D3-4: Tralee</p>
-              <p>D5-6: Ballybunion</p>
+                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+                <p>D1-2: Waterville</p>
+                <p>D3-4: Tralee</p>
+                <p>D5-6: Ballybunion</p>
                 <p>
                   <span class="material-symbols-outlined gold">verified</span
                   >Relaxed two day experience at each course
@@ -516,7 +588,10 @@
             </div>
 
             <!-- Slide 8 -->
-            <div class="search-results-card">
+            <div
+              class="search-results-card"
+              data-category="county-sligo st-patricks-links ballyliffin royal-portrush"
+            >
               <div class="search-results-card-image full-width">
                 <img
                   src="../assets/images/Glashedy7thG_compressed.webp"
@@ -535,26 +610,27 @@
               </div>
               <div class="search-results-summary center-column">
                 <div>
-                    <span>Bases</span>
-                    Lough Eske Castle, Donegal
+                  <span>Bases</span>
+                  Lough Eske Castle, Donegal
                 </div>
                 <div>
-                    <span>Courses</span>
-                    County Sligo<br>St. Patrick's Links<br>Ballyliffin<br>Royal Portrush
+                  <span>Courses</span>
+                  County Sligo<br />St. Patrick's Links<br />Ballyliffin<br />Royal
+                  Portrush
                 </div>
                 <div>
-                    <span>Transport</span>
-                    <span class="material-symbols-outlined gold">helicopter</span>
+                  <span>Transport</span>
+                  <span class="material-symbols-outlined gold">helicopter</span>
                 </div>
               </div>
               <div
                 class="search-results-card-text center-column experience-card-bullets"
               >
-              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-              <p>D1: County Sligo Golf Club</p>
-              <p>D2: St. Patricks Links</p>
-              <p>D3: Ballyliffin Golf Club Glashedy</p>
-              <p>D4: Royal Portrush</p>
+                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+                <p>D1: County Sligo Golf Club</p>
+                <p>D2: St. Patricks Links</p>
+                <p>D3: Ballyliffin Golf Club Glashedy</p>
+                <p>D4: Royal Portrush</p>
                 <p>
                   <span class="material-symbols-outlined gold">verified</span
                   >Guaranteed tee time allocation
@@ -577,7 +653,10 @@
             </div>
 
             <!-- Slide 9 -->
-            <div class="search-results-card">
+            <div
+              class="search-results-card"
+              data-category="lahinch adare-manor ballybunion"
+            >
               <div class="search-results-card-image full-width">
                 <img
                   src="../assets/images/6-lahinch.jpg"
@@ -596,26 +675,28 @@
               </div>
               <div class="search-results-summary center-column">
                 <div>
-                    <span>Bases</span>
-                    Dromoland Castle
+                  <span>Bases</span>
+                  Dromoland Castle
                 </div>
                 <div>
-                    <span>Courses</span>
-                    Lahinch<br>Adare Manor<br>Ballybunion
+                  <span>Courses</span>
+                  Lahinch<br />Adare Manor<br />Ballybunion
                 </div>
                 <div>
-                    <span>Transport</span>
-                    <span class="material-symbols-outlined gold">helicopter</span>
-                    <span class="material-symbols-outlined gold">airport_shuttle</span>
+                  <span>Transport</span>
+                  <span class="material-symbols-outlined gold">helicopter</span>
+                  <span class="material-symbols-outlined gold"
+                    >airport_shuttle</span
+                  >
                 </div>
               </div>
               <div
                 class="search-results-card-text center-column experience-card-bullets"
               >
-              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-              <p>D1: Lahinch Golf Club</p>
-              <p>D2: Adare Manor</p>
-              <p>D3: Ballybunion Golf Course</p>
+                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+                <p>D1: Lahinch Golf Club</p>
+                <p>D2: Adare Manor</p>
+                <p>D3: Ballybunion Golf Course</p>
                 <p>
                   <span class="material-symbols-outlined gold">verified</span
                   >Guaranteed tee time allocation
@@ -638,7 +719,10 @@
             </div>
 
             <!-- Slide 10 -->
-            <div class="search-results-card">
+            <div
+              class="search-results-card"
+              data-category="old-head tralee waterville"
+            >
               <div class="search-results-card-image full-width">
                 <img
                   src="../assets/images/old-head-kinsale.webp"
@@ -657,26 +741,28 @@
               </div>
               <div class="search-results-summary center-column">
                 <div>
-                    <span>Bases</span>
-                    Castlemartyr Resort
+                  <span>Bases</span>
+                  Castlemartyr Resort
                 </div>
                 <div>
-                    <span>Courses</span>
-                    Old Head<br>Tralee<br>Waterville
+                  <span>Courses</span>
+                  Old Head<br />Tralee<br />Waterville
                 </div>
                 <div>
-                    <span>Transport</span>
-                    <span class="material-symbols-outlined gold">helicopter</span>
-                    <span class="material-symbols-outlined gold">airport_shuttle</span>
+                  <span>Transport</span>
+                  <span class="material-symbols-outlined gold">helicopter</span>
+                  <span class="material-symbols-outlined gold"
+                    >airport_shuttle</span
+                  >
                 </div>
               </div>
               <div
                 class="search-results-card-text center-column experience-card-bullets"
               >
-              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-              <p>D1: Old Head Kinsale</p>
-              <p>D2: Tralee Golf Course</p>
-              <p>D3: Waterville</p>
+                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+                <p>D1: Old Head Kinsale</p>
+                <p>D2: Tralee Golf Course</p>
+                <p>D3: Waterville</p>
                 <p>
                   <span class="material-symbols-outlined gold">verified</span
                   >Dedicated Caddie Experience
@@ -699,7 +785,10 @@
             </div>
 
             <!-- Slide 11 -->
-            <div class="search-results-card">
+            <div
+              class="search-results-card"
+              data-category="brittas-bay k-club portmarnock royal-county-down"
+            >
               <div class="search-results-card-image full-width">
                 <img
                   src="../assets/images/brittas-bay.png"
@@ -718,26 +807,27 @@
               </div>
               <div class="search-results-summary center-column">
                 <div>
-                    <span>Bases</span>
-                    The Shelbourne, Dublin
+                  <span>Bases</span>
+                  The Shelbourne, Dublin
                 </div>
                 <div>
-                    <span>Courses</span>
-                    Brittas Bay<br>K-Club<br>Portmarnock<br>Royal County Down
+                  <span>Courses</span>
+                  Brittas Bay<br />K-Club<br />Portmarnock<br />Royal County
+                  Down
                 </div>
                 <div>
-                    <span>Transport</span>
-                    <span class="material-symbols-outlined gold">helicopter</span>
+                  <span>Transport</span>
+                  <span class="material-symbols-outlined gold">helicopter</span>
                 </div>
               </div>
               <div
                 class="search-results-card-text center-column experience-card-bullets"
               >
-              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-              <p>D1: Brittas Bay Golf Course</p>
-              <p>D2: K-Club</p>
-              <p>D3: Portmarnock</p>
-              <p>D4: Royal County Down</p>
+                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+                <p>D1: Brittas Bay Golf Course</p>
+                <p>D2: K-Club</p>
+                <p>D3: Portmarnock</p>
+                <p>D4: Royal County Down</p>
                 <p>
                   <span class="material-symbols-outlined gold">verified</span
                   >The Open & Ryder Cup Venues
@@ -760,7 +850,10 @@
             </div>
 
             <!-- Slide 12 -->
-            <div class="search-results-card">
+            <div
+              class="search-results-card"
+              data-category="carne county-sligo lahinch"
+            >
               <div class="search-results-card-image full-width">
                 <img
                   src="../assets/images/ashford-castle-exterior-7.webp"
@@ -779,25 +872,25 @@
               </div>
               <div class="search-results-summary center-column">
                 <div>
-                    <span>Bases</span>
-                    Ashford Castle
+                  <span>Bases</span>
+                  Ashford Castle
                 </div>
                 <div>
-                    <span>Courses</span>
-                    Carne<br>County Sligo Golf Club<br>Lahinch
+                  <span>Courses</span>
+                  Carne<br />County Sligo Golf Club<br />Lahinch
                 </div>
                 <div>
-                    <span>Transport</span>
-                    <span class="material-symbols-outlined gold">helicopter</span>
+                  <span>Transport</span>
+                  <span class="material-symbols-outlined gold">helicopter</span>
                 </div>
               </div>
               <div
                 class="search-results-card-text center-column experience-card-bullets"
               >
-              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-              <p>D1: Carne</p>
-              <p>D2: County Sligo Golf Club</p>
-              <p>D3: Lahinch</p>
+                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+                <p>D1: Carne</p>
+                <p>D2: County Sligo Golf Club</p>
+                <p>D3: Lahinch</p>
                 <p>
                   <span class="material-symbols-outlined gold">verified</span
                   >Guaranteed tee time allocation
@@ -820,7 +913,10 @@
             </div>
 
             <!-- Slide 13 -->
-            <div class="search-results-card">
+            <div
+              class="search-results-card"
+              data-category="portstewart royal-portrush ballyliffin"
+            >
               <div class="search-results-card-image full-width">
                 <img
                   src="../assets/images/PortStewart1-85-1.webp"
@@ -839,25 +935,28 @@
               </div>
               <div class="search-results-summary center-column">
                 <div>
-                    <span>Bases</span>
-                    Galgorm Resort
+                  <span>Bases</span>
+                  Galgorm Resort
                 </div>
                 <div>
-                    <span>Courses</span>
-                    Portstewart<br>Royal Portrush<br>Ballyliffin Golf Club Glashedy
+                  <span>Courses</span>
+                  Portstewart<br />Royal Portrush<br />Ballyliffin Golf Club
+                  Glashedy
                 </div>
                 <div>
-                    <span>Transport</span>
-                    <span class="material-symbols-outlined gold">airport_shuttle</span>
+                  <span>Transport</span>
+                  <span class="material-symbols-outlined gold"
+                    >airport_shuttle</span
+                  >
                 </div>
               </div>
               <div
                 class="search-results-card-text center-column experience-card-bullets"
               >
-              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-              <p>D1: Portstewart</p>
-              <p>D2: Royal Portrush</p>
-              <p>D3: Ballyliffin Golf Club Glashedy</p>
+                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+                <p>D1: Portstewart</p>
+                <p>D2: Royal Portrush</p>
+                <p>D3: Ballyliffin Golf Club Glashedy</p>
                 <p>
                   <span class="material-symbols-outlined gold">verified</span
                   >Guaranteed tee time allocation
@@ -880,7 +979,10 @@
             </div>
 
             <!-- Slide 14 -->
-            <div class="search-results-card">
+            <div
+              class="search-results-card"
+              data-category="royal-county-down royal-portrush portstewart st-patricks-links"
+            >
               <div class="search-results-card-image full-width">
                 <img
                   src="../assets/images/RPR-Dunluce-Course-1.jpg"
@@ -899,26 +1001,27 @@
               </div>
               <div class="search-results-summary center-column">
                 <div>
-                    <span>Bases</span>
-                    Culloden Estate & Spa
+                  <span>Bases</span>
+                  Culloden Estate & Spa
                 </div>
                 <div>
-                    <span>Courses</span>
-                    Royal County Down<br>Royal Portrush<br>Portstewart<br>St. Patrick's Links
+                  <span>Courses</span>
+                  Royal County Down<br />Royal Portrush<br />Portstewart<br />St.
+                  Patrick's Links
                 </div>
                 <div>
-                    <span>Transport</span>
-                    <span class="material-symbols-outlined gold">helicopter</span>
+                  <span>Transport</span>
+                  <span class="material-symbols-outlined gold">helicopter</span>
                 </div>
               </div>
               <div
                 class="search-results-card-text center-column experience-card-bullets"
               >
-              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-              <p>D1: Royal County Down</p>
-              <p>D2: Royal Portrush</p>
-              <p>D3: Portstewart</p>
-              <p>D4: St. Patrick's Links</p>
+                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+                <p>D1: Royal County Down</p>
+                <p>D2: Royal Portrush</p>
+                <p>D3: Portstewart</p>
+                <p>D4: St. Patrick's Links</p>
                 <p>
                   <span class="material-symbols-outlined gold">verified</span
                   >Guaranteed tee time allocation
@@ -941,7 +1044,10 @@
             </div>
 
             <!-- Slide 15 -->
-            <div class="search-results-card">
+            <div
+              class="search-results-card"
+              data-category="adare-manor k-club royal-county-down"
+            >
               <div class="search-results-card-image full-width">
                 <img
                   src="../assets/images/golf-at-adare-manor-39-801x447.jpg"
@@ -960,26 +1066,26 @@
               </div>
               <div class="search-results-summary center-column">
                 <div>
-                    <span>Bases</span>
-                    Adare Manor
+                  <span>Bases</span>
+                  Adare Manor
                 </div>
                 <div>
-                    <span>Courses</span>
-                    Adare Manor<br>K-Club<br>Royal County Down
+                  <span>Courses</span>
+                  Adare Manor<br />K-Club<br />Royal County Down
                 </div>
                 <div>
-                    <span>Transport</span>
-                    <span class="material-symbols-outlined gold">helicopter</span>
+                  <span>Transport</span>
+                  <span class="material-symbols-outlined gold">helicopter</span>
                 </div>
               </div>
               <div
                 class="search-results-card-text center-column experience-card-bullets"
               >
-              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-              <p>D1: Adare Manor</p>
-              <p>D2: K-Club</p>
-              <p>D3: Royal County Down</p>
-              <p>D4: Adare Manor</p>
+                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+                <p>D1: Adare Manor</p>
+                <p>D2: K-Club</p>
+                <p>D3: Royal County Down</p>
+                <p>D4: Adare Manor</p>
                 <p>
                   <span class="material-symbols-outlined gold">verified</span
                   >Hosts of Ryder Cups and The Open Championship
@@ -1000,7 +1106,6 @@
                 <span>Inquire</span>
               </div>
             </div>
-
           </div>
         </section>
         <!-- Call to action section-->
@@ -1011,8 +1116,11 @@
             </h3>
             <h2 class="section-h2">Need a Custom Itinerary?</h2>
             <p>
-              All our experiences are tailored to your unique preferences and requirements. Have a party of 24, no problem. Want to visit opposite ends of Ireland in one trip? We can arrange that too.
-              Our private client desk is here to assist you in crafting the perfect itinerary for your Irish adventure.
+              All our experiences are tailored to your unique preferences and
+              requirements. Have a party of 24, no problem. Want to visit
+              opposite ends of Ireland in one trip? We can arrange that too. Our
+              private client desk is here to assist you in crafting the perfect
+              itinerary for your Irish adventure.
             </p>
           </div>
           <div class="call-to-action-btn-container">
