@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // Initialise the Tom Select for the course selection
-    new TomSelect("#select-course", {
+    const COURSESELECT = new TomSelect("#select-course", {
         maxItems: 16,
         plugins: ['remove_button'],  // adds the x to remove the tag
 
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Initialise the Tom Select for the budget selection
-    const BUDGETSELECT =new TomSelect("#select-value", {
+    const BUDGETSELECT = new TomSelect("#select-value", {
         maxItems: 1,
         plugins: ['remove_button'],  // adds the x to remove the tag
 
@@ -76,5 +76,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // set the initial count
     applyFilters();
+
+    // clear button reset the filter objects
+    document.getElementById("clear-filters").addEventListener("click", () => {
+        COURSESELECT.clear();
+        BUDGETSELECT.clear();
+        selectedCourses = [];
+        maxBudgetEuros = 0;
+        applyFilters();
+    });
 
 });

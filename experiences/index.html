@@ -103,45 +103,49 @@
             <!-- Search bar for experiences -->
             <div class="search-container">
               <h4>Filter Itineraries</h4>
-              <div>
-                <label for="select-course">Select Courses</label>
-                <select
-                  id="select-course"
-                  name="course[]"
-                  multiple
-                  placeholder="Search or select courses..."
-                  autocomplete="off"
-                >
-                  <option value="adare-manor">Adare Manor</option>
-                  <option value="ballybunion">Ballybunion</option>
-                  <option value="ballyliffin">Ballyliffin</option>
-                  <option value="brittas-bay">Brittas Bay</option>
-                  <option value="carne">Carne</option>
-                  <option value="county-sligo">County Sligo</option>
-                  <option value="k-club">K Club</option>
-                  <option value="lahinch">Lahinch</option>
-                  <option value="old-head">Old Head</option>
-                  <option value="portstewart">Portstewart</option>
-                  <option value="portmarnock">Portmarnock</option>
-                  <option value="royal-county-down">Royal County Down</option>
-                  <option value="royal-portrush">Royal Portrush</option>
-                  <option value="st-patricks-links">St. Patrick's Links</option>
-                  <option value="tralee">Tralee</option>
-                  <option value="waterville">Waterville</option>
-                </select>
-
-                <label for="select-value">Specify a Budget</label>
-                <select id="select-value" name="budget" placeholder="Specify a budget" autocomplete="off">
-                  <option value="">Any Budget</option>
-                  <option value="5000">Under €5000</option>
-                  <option value="10000">Under €10,000</option>
-                  <option value="15000">Under €15,000</option>
-                  <option value="20000">Under €20,000</option>
-                  <option value="25000">Under €25,000</option>
-                </select>
+              <div class="filter-container">
+                <div class="select-container">
+                  <label for="select-course">Select Courses</label>
+                  <select
+                    id="select-course"
+                    name="course[]"
+                    multiple
+                    placeholder="Search or select courses..."
+                    autocomplete="off"
+                  >
+                    <option value="adare-manor">Adare Manor</option>
+                    <option value="ballybunion">Ballybunion</option>
+                    <option value="ballyliffin">Ballyliffin</option>
+                    <option value="brittas-bay">Brittas Bay</option>
+                    <option value="carne">Carne</option>
+                    <option value="county-sligo">County Sligo</option>
+                    <option value="k-club">K Club</option>
+                    <option value="lahinch">Lahinch</option>
+                    <option value="old-head">Old Head</option>
+                    <option value="portstewart">Portstewart</option>
+                    <option value="portmarnock">Portmarnock</option>
+                    <option value="royal-county-down">Royal County Down</option>
+                    <option value="royal-portrush">Royal Portrush</option>
+                    <option value="st-patricks-links">St. Patrick's Links</option>
+                    <option value="tralee">Tralee</option>
+                    <option value="waterville">Waterville</option>
+                  </select>
+                </div>
+                <div class="select-container">
+                  <label for="select-value">Specify a Budget</label>
+                  <select id="select-value" name="budget" placeholder="Specify a budget" autocomplete="off">
+                    <option value="">Any Budget</option>
+                    <option value="5000">Under €5000</option>
+                    <option value="10000">Under €10,000</option>
+                    <option value="15000">Under €15,000</option>
+                    <option value="20000">Under €20,000</option>
+                    <option value="25000">Under €25,000</option>
+                  </select>
+                </div>
               </div>
               <div class="card-total gold">
-                Displaying <span id="card-number">15</span> results
+                <p>Displaying <span id="card-number">15</span> results</p>
+                <button type="button" id="clear-filters"><span class="material-symbols-outlined">filter_alt_off</span>Clear Filters</button>
               </div>
             </div>
           </div>
