@@ -122,6 +122,8 @@ function applyCurrency(currency) {
         element.textContent = formatPrice(Number(element.dataset.priceEur), currency);
     });
     document.documentElement.dataset.currency = currency;
+    // broadcast an event so other scripts can react to the currency change
+    document.dispatchEvent(new CustomEvent('currencyChange', { detail: { currency } }));
 }
 
 const activeCurrency = getSavedCurrency();
