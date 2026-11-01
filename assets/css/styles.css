@@ -1094,6 +1094,12 @@ footer form {
       0.5rem
     );
   width: min(85%, 400px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-results-card:hover {
+  transform: translateY(-0.25rem) scale(1.02);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .search-results-card .center-column {
