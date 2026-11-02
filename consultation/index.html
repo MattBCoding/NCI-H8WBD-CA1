@@ -14,7 +14,10 @@
       rel="stylesheet"
     />
     <!-- International Telephone Input CSS and JS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@29.5.10/dist/css/intlTelInput.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@29.5.10/dist/css/intlTelInput.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@29.5.10/dist/js/intlTelInput.min.js"></script>
     <!-- End International Telephone Input CSS and JS -->
     <link rel="stylesheet" href="../assets/css/styles.css" />
@@ -80,7 +83,9 @@
                 <a href="./index.html">Experiences</a>
               </li>
               <li>
-                <a href="../consultation/index.html" class="active-page">Bespoke Consultation</a>
+                <a href="../consultation/index.html" class="active-page"
+                  >Bespoke Consultation</a
+                >
               </li>
             </ul>
           </nav>
@@ -91,51 +96,97 @@
           <!-- consultation intro section -->
         </section>
         <section>
-            <!-- consultation form section - needs validation for required fields, valid email format, valid phone number, minimum message length -->
-            <!-- needs the following fields -->
-            <!-- Name field -->
-            <!-- Email field -->
-            <!-- query type drop down - booking/payment/general inquiry/other -->
-            <!-- Message field -->
-             <form id="consultation-form">
-                <div>
-                    <label for="name">Lead Traveller Full Name</label>
-                    <input type="text" id="name" name="name" required minlength="3" maxlength="255" placeholder="e.g. John Doe"><span class="material-symbols-outlined">id_card</span>
-                </div>
-                <div>
-                    <label for="email">Direct Private Email</label>
-                    <input type="email" id="email" name="email" required minlength="3" maxlength="255"><span class="material-symbols-outlined">alternate_email</span>
-                </div>
-                <div>
-                    <label for="phone">Secure Telephone / Mobile Number</label>
-                    <input type="tel" id="phone" name="phone" required><span class="material-symbols-outlined">mobile_3</span>
-                </div>
-                <div>
-                    <label for="query-type">Query Type</label>
-                    <select id="query-type" name="query-type">
-                        <option value="">Select an option</option>
-                        <option value="booking">Booking</option>
-                        <option value="payment">Payment</option>
-                        <option value="general">General Inquiry</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="message">Tailored Requirements and Distinct Preferences</label>
-                    <textarea id="message" name="message" required minlength="10"></textarea>
-                </div>
-                <div>
-                    <button type="submit">Submit</button>
-                </div>
-             </form>
-             <dialog id="consultation-modal" class="newsletter-modal" aria-labelledby="consultation-modal-title">
-                <div class="newsletter-modal-content">
-                    <span class="material-symbols-outlined gold" aria-hidden="true">call</span>
-                    <h3 id="consultation-model-title">Request Received</h3>
-                    <p>Thank you. Your details have been successfully submitted and someone from Emerald Escapes will be in touch with you shortly. We look forward to helping you onto the course.</p>
-                    <button type="button" id="consultation-modal-close" autofocus>Close</button>
-                </div>
-             </dialog>
+          <!-- consultation form section - needs validation for required fields, valid email format, valid phone number, minimum message length -->
+          <!-- needs the following fields -->
+          <!-- Name field -->
+          <!-- Email field -->
+          <!-- query type drop down - booking/payment/general inquiry/other -->
+          <!-- Message field -->
+          <form id="consultation-form">
+            <div class="form-group-1">
+              <label for="name">Lead Traveller Full Name</label>
+              <div class="input-container">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  minlength="3"
+                  maxlength="255"
+                  placeholder="e.g. John Doe"
+                /><span class="material-symbols-outlined">id_card</span>
+              </div>
+            </div>
+            <div class="form-group-2">
+              <label for="email">Direct Private Email</label>
+              <div class="input-container">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  minlength="3"
+                  maxlength="255"
+                /><span class="material-symbols-outlined">alternate_email</span>
+              </div>
+            </div>
+
+            <div class="form-group-3">
+              <label for="phone">Secure Telephone / Mobile Number</label>
+              <div class="input-container">
+                <input type="tel" id="phone" name="phone" required /><span
+                  class="material-symbols-outlined"
+                  >mobile_3</span
+                >
+              </div>
+            </div>
+            <div class="form-group-4">
+              <label for="query-type">Query Type</label>
+              <select id="query-type" name="query-type">
+                <option value="">Select an option</option>
+                <option value="booking">Booking</option>
+                <option value="payment">Payment</option>
+                <option value="general">General Inquiry</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group-5">
+              <label for="message"
+                >Tailored Requirements and Distinct Preferences</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                required
+                minlength="10"
+              ></textarea>
+            </div>
+
+            <div class="form-group-6">
+              <button class="consultation-submit" type="submit">Submit</button>
+            </div>
+          </form>
+          <dialog
+            id="consultation-modal"
+            class="newsletter-modal"
+            aria-labelledby="consultation-modal-title"
+          >
+            <div class="newsletter-modal-content">
+              <span class="material-symbols-outlined gold" aria-hidden="true"
+                >call</span
+              >
+              <h3 id="consultation-model-title">Request Received</h3>
+              <p>
+                Thank you. Your details have been successfully submitted and
+                someone from Emerald Escapes will be in touch with you shortly.
+                We look forward to helping you onto the course.
+              </p>
+              <button type="button" id="consultation-modal-close" autofocus>
+                Close
+              </button>
+            </div>
+          </dialog>
         </section>
         <!-- Call to action section-->
         <section class="call-to-action-section">

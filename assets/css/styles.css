@@ -1094,7 +1094,9 @@ footer form {
       0.5rem
     );
   width: min(85%, 400px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .search-results-card:hover {
@@ -1181,16 +1183,16 @@ footer form {
   font-weight: 300;
   margin: 0.75rem 0;
   padding: 0.5rem 0.25rem;
-  background-color: #F4F3F1;
+  background-color: #f4f3f1;
   display: flex;
   gap: 0.5rem;
   justify-content: space-evenly;
 }
 
 .search-results-summary > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .search-results-summary > div span {
@@ -1199,8 +1201,8 @@ footer form {
 }
 
 .search-results-card-text h4 {
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
 
 .search-results-card-text span.material-symbols-outlined.gold {
@@ -1208,7 +1210,7 @@ footer form {
 }
 
 .search-results-card-text > p {
-    margin-bottom: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 
 .search-results-card-bullets p {
@@ -1270,7 +1272,7 @@ footer form {
 .ts-dropdown {
   border-radius: 0 0 8px 8px;
   border: 1px solid #ccc;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 10000;
 }
 
@@ -1280,13 +1282,13 @@ div.ts-control {
 
 /* duplicate of tom-select style rule to apply multi styling to none multi-select element */
 .ts-wrapper .ts-control > div {
-    cursor: pointer;
-    margin: 0 3px 3px 0;
-    padding: 2px 6px;
-    background: #f2f2f2;
-    color: #303030;
-    border: 0px solid #d0d0d0;
-    overflow: auto;
+  cursor: pointer;
+  margin: 0 3px 3px 0;
+  padding: 2px 6px;
+  background: #f2f2f2;
+  color: #303030;
+  border: 0px solid #d0d0d0;
+  overflow: auto;
 }
 
 .ts-wrapper.plugin-remove_button .item .remove {
@@ -1306,14 +1308,98 @@ div.ts-control {
 }
 
 .ts-dropdown .active {
-    background-color: #0b291e;
-    color: #ffffff;
- }
+  background-color: #0b291e;
+  color: #ffffff;
+}
 
- .ts-dropdown .option {
+.ts-dropdown .option {
   min-height: 44px;
- }
+}
 
+/* ************************** */
+/* consultation page */
+/* ************************** */
+
+#consultation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+#consultation-form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#consultation-form input {
+  padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+  border: 1px solid #cccccc;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  width: 100%;
+}
+
+.consultation-submit {
+  color: #ffffff;
+  background-color: #0b291e;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.consultation-submit:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+  width: 100%;
+  position: relative;
+}
+
+.input-container > span.material-symbols-outlined {
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.iti--input-container {
+  width: 100%;
+}
+
+.iti__country-container {
+  left: 2.5rem;
+}
+
+.iti__tel-input {
+  padding-left: 9rem !important; /* have to use important to override inline style coming from js - makes space for icon, flag, country code */
+}
+
+#query-type {
+  padding: 0.5rem;
+  border: 1px solid #cccccc;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-family: inherit;
+}
+
+#message {
+  min-height: 100px;
+  padding: 0.5rem;
+  border: 1px solid #cccccc;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-family: inherit;
+}
 
 /* *************************** */
 /* media queries */
@@ -1504,6 +1590,46 @@ div.ts-control {
     flex-direction: column;
     gap: 0.25rem;
   }
+
+  #consultation-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "form-group-1 form-group-2"
+      "form-group-3 form-group-4"
+      "form-group-5 form-group-5"
+      "form-group-6 form-group-6";
+  }
+
+  #consultation-form .form-group-1 {
+    grid-area: form-group-1;
+  }
+
+  #consultation-form .form-group-2 {
+    grid-area: form-group-2;
+  }
+
+  #consultation-form .form-group-3 {
+    grid-area: form-group-3;
+  }
+
+  #consultation-form .form-group-4 {
+    grid-area: form-group-4;
+  }
+
+  #consultation-form .form-group-5 {
+    grid-area: form-group-5;
+  }
+
+  #consultation-form .form-group-6 {
+    grid-area: form-group-6;
+  }
+  
+  .consultation-submit {
+    padding: 0.75rem 1.25rem;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -1543,7 +1669,6 @@ div.ts-control {
   .ts-dropdown .option {
     min-height: 0;
   }
-
 }
 
 @media (min-width: 1300px) {
