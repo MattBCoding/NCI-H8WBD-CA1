@@ -117,6 +117,7 @@ p {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 0.875rem;
   border: none;
+  background-color: #faf9f7;
 }
 
 .header-row-two {
@@ -1258,7 +1259,7 @@ footer form {
   font-weight: 300;
 }
 
-.search-results-card-details > span {
+.search-results-card-details > a {
   align-self: center;
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -1266,6 +1267,7 @@ footer form {
   background-color: #0b291e;
   padding: 0.25rem 1rem;
   border-radius: 0.25rem;
+  text-decoration: none;
 }
 
 .filter-container {
