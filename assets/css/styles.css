@@ -773,7 +773,12 @@ header h1 {
   font-weight: 300;
 }
 
-.experience-card-details > span {
+.experience-card-details > a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.experience-card-details > a >  span {
   align-self: center;
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -782,6 +787,7 @@ header h1 {
   padding: 0.25rem 1rem;
   border-radius: 0.25rem;
 }
+
 
 .experiences-section-footer {
   padding: 2rem;

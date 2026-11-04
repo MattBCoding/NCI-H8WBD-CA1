@@ -86,3 +86,12 @@ CONSULTATION_MODAL.addEventListener("click", (event) => {
         CONSULTATION_MODAL.close();
     }
 });
+
+const PARAMS = new URLSearchParams(window.location.search);
+const DESTINATION = PARAMS.get("destination");
+const SEASON = PARAMS.get("season");
+const GOLFERS = PARAMS.get("golfers");
+
+if (DESTINATION && SEASON && GOLFERS) {
+    MESSAGE_INPUT.value = `Destination/Region: ${DESTINATION}\nPreferred Season: ${SEASON}\nNumber of Golfers: ${GOLFERS}\n\n`;
+}
