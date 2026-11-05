@@ -246,7 +246,7 @@ header h1 {
   /* hex alpha values 90%-E6, 91%-E8, 92%-EB, 93%-ED, 94%-F0, 95%-F2, 96%-F5, 97%-F7, 98%-FA, 99%-FC */
   background: radial-gradient(
     circle,
-    #133f30f2 0%,
+    #133f30ed 0%,
     #0b291ef5 50%,
     #00120a 100%
   );
@@ -418,6 +418,14 @@ header h1 {
 .story-text-container {
   font-size: 0.875rem; /* px equivalent 14px */
   font-weight: 300;
+}
+
+.arnold-quote {
+  font-style: italic;
+  color: #785917;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  margin: 1rem 0;
 }
 
 .story-stats-container {
@@ -779,7 +787,7 @@ header h1 {
   text-decoration: none;
 }
 
-.experience-card-details > a >  span {
+.experience-card-details > a > span {
   align-self: center;
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -788,7 +796,6 @@ header h1 {
   padding: 0.25rem 1rem;
   border-radius: 0.25rem;
 }
-
 
 .experiences-section-footer {
   padding: 2rem;
@@ -1427,7 +1434,7 @@ div.ts-control {
   text-transform: uppercase;
 }
 
-.consultation-form-section h2{
+.consultation-form-section h2 {
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 1rem;
@@ -1798,6 +1805,11 @@ div.ts-control {
 
   .story-container {
     flex-direction: row;
+  }
+
+  .arnold-quote {
+    margin: 3rem 0;
+    text-align: center;
   }
 
   .phone-number {
