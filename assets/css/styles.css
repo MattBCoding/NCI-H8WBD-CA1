@@ -961,6 +961,20 @@ footer {
   gap: 0.5rem;
 }
 
+.footer-links a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid transparent;
+}
+
+.footer-links a:hover {
+  border-bottom: 1px solid #785917;
+}
+
+.footer-links a:visited {
+  color: inherit;
+}
+
 #footer-email {
   padding: 0.5rem;
   border: 1px solid #cccccc;
