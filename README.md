@@ -28,7 +28,7 @@ AI was used as I was not able to find a suitable image from usual sources that w
 
 Here is a screenshot of the prompt being run, and the resulting image. I then resized the image and optimised it using tinypng.com before adding it to the images folder. The screenshot has not been altered in anyway.
 
-![screenshot of AI prompt and resulting image generated](./assets/images/Screenshot%202026-10-16%20at%2017.24.24.png)
+![screenshot of AI prompt and resulting image generated](./assets/documentation/images/founder-image-prompt.png)
 
 ## AI Content Generation
 Google Gemini was used to generate the short descriptions for most of the card summaries in the carousel on the homepage. I will most likely use this text elsewhere as well.

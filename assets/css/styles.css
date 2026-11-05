@@ -825,7 +825,7 @@ header h1 {
   max-width: 784px;
 }
 
-.experiences-section-footer > button {
+.experiences-section-footer > a {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 0.75rem;
   background-color: #785917;
@@ -838,9 +838,10 @@ header h1 {
   align-items: center;
   text-transform: uppercase;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
 }
 
-.experiences-section-footer > button > span {
+.experiences-section-footer > a > span {
   font-size: 0.75rem;
   margin-left: 0.5rem;
 }
