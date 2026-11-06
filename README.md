@@ -12,7 +12,7 @@ Sources used:
 - lanhinchgolf.com
 - portmarnockgolfclub.ie
 - adaremanor.com
-- https://www.portstewartgc.co.uk/the-strand/
+- portstewartgc.co.uk/the-strand/
 
 ## AI Image Generation
 AI was utilised to generate the following image(s).
@@ -40,7 +40,9 @@ Here are the full list of requests and responses, along with screenshot evidence
    - Request = ```can you give me a two sentance summary about Royal County Down golf course```
    - Response = ```Located in Northern Ireland beneath the spectacular Mountains of Mourne, Royal County Down is a historic 1889 club that is consistently ranked among the greatest golf courses in the world. Its renowned Championship links course is celebrated for its breathtaking natural scenery and its exceptionally challenging, rugged layout featuring narrow fairways, deep bunkers, and natural sand dunes.```
    <br>
+
    ![RCD Prompt](./assets/documentation/images/RCD-gemini-prompt.png)
+   
    <br>
 2. ### Ballybunion Golf Club
     - Request = ```can you give me a shorter two sentance summary for ballybunion golf club```
