@@ -27,11 +27,7 @@ carouselPreviousCourseBtn.addEventListener("click", () => {
   // Logic to go to the previous course in the carousel
   let cardWidth = card.offsetWidth;
   let cardGap = parseFloat(getComputedStyle(carouselContainer).columnGap);
-  console.log("Card width:", cardWidth, "Card gap:", cardGap);
-  console.log(
-    "Card gap from gap property:",
-    parseFloat(getComputedStyle(carouselContainer).gap),
-  );
+
   carouselContainer.scrollBy({
     left: -(cardWidth + cardGap), // negative value to scroll left
     behavior: reducedMotionPreference.matches ? "auto" : "smooth",
@@ -42,12 +38,7 @@ carouselNextCourseBtn.addEventListener("click", () => {
   // Logic to go to the next course in the carousel
   let cardWidth = card.offsetWidth;
   let cardGap = parseFloat(getComputedStyle(carouselContainer).columnGap);
-  console.log("Card width:", cardWidth, "Card gap:", cardGap);
-  console.log(
-    "Card gap from gap property:",
-    parseFloat(getComputedStyle(carouselContainer).gap),
-  );
-  console.log(reducedMotionPreference.matches);
+
   carouselContainer.scrollBy({
     left: cardWidth + cardGap, // positive value to scroll right
     behavior: reducedMotionPreference.matches ? "auto" : "smooth",

@@ -24,7 +24,6 @@ function loadCachedRates() {
             && typeof cached.fetchedAt === 'number') {
             // check if there is anything there, then if it has the correct structure of rates object and fetchedAt timestamp
             // if so return the cached rates
-            console.log('Using cached rates:', cached);
             return cached;
         }
     } catch {
@@ -62,8 +61,6 @@ async function fetchRates() {
 // makes sure CURRENCY_RATES is no more than ten minutes old; on any failure the
 // existing (cached or preset) rates stay in place so the site keeps working
 async function refreshRates() {
-    console.log('Refreshing currency rates...');
-    console.log(Date.now());
     const cached = loadCachedRates();
     if (cached) {
         Object.assign(CURRENCY_RATES, cached.rates);
@@ -81,8 +78,6 @@ async function refreshRates() {
     } catch (error) {
         console.warn('Using previous exchange rates:', error);
     }
-    console.log('Finished refreshing currency rates.');
-    console.log(Date.now());
 }
 
 function getSavedCurrency() {
@@ -157,7 +152,6 @@ const irishTimeFormat = new Intl.DateTimeFormat("en-IE", {
   minute: "2-digit",
   hour12: false,
   timeZone: "Europe/Dublin", // handles daylight saving automatically
-//   timeZoneName: "short",
 });
 
 function updateCurrentTime() {
@@ -182,7 +176,6 @@ const EMAIL_PATTERN = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)*\.[^\s@.]{2,}$/;
 
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input
 newsletterEmail.addEventListener("input", () => {
-  console.log("Newsletter email input changed:", newsletterEmail.value);
   newsletterEmail.setCustomValidity(""); // clear our custom message as soon as they edit
 });
 
@@ -193,7 +186,6 @@ newsletterForm.addEventListener("submit", (event) => {
 
   // use regex to validate email format
   if (!EMAIL_PATTERN.test(newsletterEmail.value)) {
-    console.log("Invalid email format:", newsletterEmail.value);
     // return error to the user via custom validity message
     newsletterEmail.setCustomValidity(
       "Please enter a full email address, e.g. name@domain.com",
@@ -213,7 +205,6 @@ newsletterModalClose.addEventListener("click", () => newsletterModal.close());
 
 // close modal if user clicks outside of the modal.
 newsletterModal.addEventListener("click", (event) => {
-  console.log("Newsletter modal clicked:", event.target);
   if (event.target === newsletterModal) {
     newsletterModal.close();
   }

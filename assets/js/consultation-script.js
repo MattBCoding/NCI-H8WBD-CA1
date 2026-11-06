@@ -1,23 +1,13 @@
 // https://intl-tel-input.com/docs/vanilla-javascript
 
 const PHONE_INPUT = document.querySelector("#phone");
-// const INITIALCOUNTRYLOOKUP = async () => {
-//     try {
-//         const RES = await fetch("https://ipapi.co/json");
-//         const DATA = await RES.json();
-//         return DATA.country_code;
-//     } catch {
-//         console.log("Country lookup failed");
-//         return "ie"; // default to Ireland if lookup fails
-//     }
-// };
 
 const CUSTOMPLACEHOLDER = (exampleNumber) =>
-  exampleNumber ? exampleNumber.replace(/\d/g, "X") : "Enter Number";
+    exampleNumber ? exampleNumber.replace(/\d/g, "X") : "Enter Number";
 
 const telInputObj = window.intlTelInput(PHONE_INPUT, {
     countryOrder: ["ie", "gb", "ca", "de", "jp", "us"],
-    allowedNumberTypes: ["FIXED_LINE","MOBILE","FIXED_LINE_OR_MOBILE"],
+    allowedNumberTypes: ["FIXED_LINE", "MOBILE", "FIXED_LINE_OR_MOBILE"],
     customPlaceholder: CUSTOMPLACEHOLDER,
     loadUtils: () =>
         import("https://cdn.jsdelivr.net/npm/intl-tel-input@29.5.10/dist/js/utils.js"),
@@ -33,15 +23,15 @@ const CONSULTATION_MODAL = document.getElementById("consultation-modal");
 const CONSULTATION_MODAL_CLOSE = document.getElementById("consultation-modal-close");
 
 [NAME_INPUT, EMAIL_INPUT, PHONE_INPUT, QUERY_INPUT, MESSAGE_INPUT].forEach((input) => {
-  input.addEventListener("input", () => {
-    input.setCustomValidity(""); // clear custom message as soon as they edit
-  });
+    input.addEventListener("input", () => {
+        input.setCustomValidity(""); // clear custom message as soon as they edit
+    });
 });
 
 PHONE_INPUT.addEventListener("countrychange", () => PHONE_INPUT.setCustomValidity(""));
 
 FORM.addEventListener("submit", async (event) => {
-    event.preventDefault(); // prevent the page from reloading
+    event.preventDefault();
     await telInputObj.promise;
     // EMAIL_PATTERN comes from shared.js
     const VALIDATIONS = [
@@ -50,11 +40,9 @@ FORM.addEventListener("submit", async (event) => {
         [PHONE_INPUT, telInputObj.isValidNumber(), "Please enter a valid phone number for the selected country."],
         [MESSAGE_INPUT, MESSAGE_INPUT.value.trim().length >= 10, "Please tell us a little bit more about your desired trip (at least 10 characters)."],
     ];
-    console.log('email validation:', EMAIL_PATTERN);
 
     let firstInvalidInput = null;
     for (const [field, isValid, errorMessage] of VALIDATIONS) {
-        console.log(`Validating field: ${field.id}, isValid: ${isValid}`);
         field.setCustomValidity(isValid ? "" : errorMessage);
         if (!isValid && !firstInvalidInput) {
             firstInvalidInput = field;
@@ -75,8 +63,8 @@ FORM.addEventListener("submit", async (event) => {
     console.log("Consultation Form request received:", DETAILS);
 
     FORM.reset();  // clear the form fields after successful submission
-     // using dialog element - showModal() displays the modal and traps focus inside it - esc key closes it automatically
-  // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog#additional_notes
+    // using dialog element - showModal() displays the modal and traps focus inside it - esc key closes it automatically
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog#additional_notes
     CONSULTATION_MODAL.showModal();
 });
 
