@@ -386,15 +386,15 @@ header h1 {
   align-items: flex-start;
 }
 
-.hero-tile h5 {
+.hero-tile-heading {
   font-weight: 400;
-  font-size: 0.875rem; /* px equivalent 14px */
+  font-size: 0.875rem;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 .hero-tile p {
   font-weight: 200;
-  font-size: 0.75rem; /* px equivalent 12px */
+  font-size: 0.75rem;
 }
 
 /* *************************** */
@@ -650,7 +650,7 @@ header h1 {
   border-right: 1px solid #cccccc;
 }
 
-.slide-details h5 {
+.slide-details h4 {
   font-size: 0.75rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -728,8 +728,12 @@ header h1 {
   letter-spacing: 0.1rem;
 }
 
-.experience-card-text h4 {
+.experience-card-subheading {
   margin-top: 1rem;
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
 }
 
 .experience-card-text h3 {
@@ -738,7 +742,7 @@ header h1 {
   margin-bottom: 1rem;
 }
 
-.experience-card-text p {
+.experience-card-description {
   font-size: 0.875rem;
   font-weight: 300;
   margin: 0.75rem 0;
@@ -764,7 +768,7 @@ header h1 {
   position: relative;
 }
 
-.experience-card-details h5 {
+.experience-card-details .experience-card-price-heading {
   font-size: 0.75rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -878,7 +882,7 @@ header h1 {
   padding: 0.5rem;
 }
 
-.value-card h4 {
+.value-card h3 {
   margin-top: 0.5rem;
   text-transform: none;
   font-size: 1rem;
@@ -891,10 +895,14 @@ header h1 {
   line-height: 1.5;
 }
 
-.value-card > h5 {
+.value-card-subheading {
   border-top: 1px solid #cccccc;
   margin-top: 1rem;
   padding-top: 1rem;
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
 }
 
 /* *************************** */
