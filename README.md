@@ -290,5 +290,5 @@ response = ```### 1. The South West Kingdom
 ![travel prompt](./assets/documentation/images/travel-package-gemini-prompt.png)
 
 
-## HTML Validation
-All pages were validated, experiences/index.html has two errors due to select elements gaining placeholder values which is not a valid attribute for the select element. The javascript package used for the two select boxes allows placeholder values which requires the normally unavailable placeholder attribute. The additional functionality in this case was deemed worth the validation error.
+## File Validation
+All files were validated, experiences/index.html has two errors due to select elements gaining placeholder values which is not a valid attribute for the select element. The javascript package used for the two select boxes allows placeholder values which requires the normally unavailable placeholder attribute. The additional functionality in this case was deemed worth the validation error.
