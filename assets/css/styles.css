@@ -1091,8 +1091,9 @@ footer form {
   padding: 0;
 }
 
-.search-container h4 {
+#filter-itineraries {
   margin-bottom: 0.5rem;
+  font-size: 1rem;
 }
 
 .card-total {
@@ -1394,7 +1395,7 @@ div.ts-control {
   text-align: center;
 }
 
-.intro-tile h4 {
+.intro-tile h3 {
   font-size: 1.25rem;
 }
 
