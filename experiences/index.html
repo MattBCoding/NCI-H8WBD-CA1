@@ -1,1347 +1,1082 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Matthew Bodden" />
-    <meta
-      name="description"
-      content="Emerald Escapes - Your gateway to luxurious and serene Irish golf travel experiences."
-    />
-    <title>Emerald Escapes</title>
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="../assets/images/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../assets/images/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="../assets/images/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="../assets/images/favicon/site.webmanifest" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/tom-select@2.6.2/dist/css/tom-select.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.6.2/dist/js/tom-select.complete.min.js"></script>
-    <link rel="stylesheet" href="../assets/css/styles.css" />
-    <script src="../assets/js/shared.js" defer></script>
-    <script src="../assets/js/experiences-script.js" defer></script>
-  </head>
-  <body>
-    <div class="page-container">
-      <header>
-        <!-- container bar above main nav and logo heading-->
-        <div class="header-row-one">
-          <!-- telephone link -->
-          <div class="telephone-link-container">
-            <a href="tel:+35310000000" aria-label="Call Private Client Desk">
-              <span class="material-symbols-outlined gold" aria-hidden="true"
-                >call</span
-              >
-              <span class="call-label">Call</span>
-              <span class="phone-label">Private Client Desk</span>
-              <span class="phone-number">: +353 (0)1 000 0000</span>
-            </a>
-          </div>
 
-          <!-- Current time -->
-          <div class="current-time-container">
-            <span class="material-symbols-outlined gold">schedule</span>
-            <span id="current-time"></span>
-          </div>
-          <!-- Currency Selector -->
-          <div class="currency-selector-container">
-            <span class="material-symbols-outlined gold"
-              >currency_exchange</span
-            >
-            <label for="currency-select" class="visually-hidden"
-              >Currency</label
-            >
-            <select id="currency-select" name="currency">
-              <option value="EUR">€ EUR</option>
-              <option value="USD">$ USD</option>
-              <option value="GBP">£ GBP</option>
-            </select>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Matthew Bodden" />
+  <meta name="description"
+    content="Emerald Escapes - Your gateway to luxurious and serene Irish golf travel experiences." />
+  <title>Emerald Escapes</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="../assets/images/favicon/site.webmanifest" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tom-select@2.6.2/dist/css/tom-select.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/tom-select@2.6.2/dist/js/tom-select.complete.min.js"></script>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <script src="../assets/js/shared.js" defer></script>
+  <script src="../assets/js/experiences-script.js" defer></script>
+</head>
+
+<body>
+  <div class="page-container">
+    <header>
+      <div class="header-row-one">
+        <!-- telephone link -->
+        <div class="telephone-link-container">
+          <a href="tel:+35310000000" aria-label="Call Private Client Desk">
+            <span class="material-symbols-outlined gold" aria-hidden="true">call</span>
+            <span class="call-label">Call</span>
+            <span class="phone-label">Private Client Desk</span>
+            <span class="phone-number">: +353 (0)1 000 0000</span>
+          </a>
         </div>
-        <!-- main logo and navigation container -->
-        <div class="header-row-two">
-          <!-- Logo SVG - make home link -->
-          <div class="wordmark-container">
-            <h1>Emerald Escapes</h1>
-            <h2 class="gold alternate-font-heading">
-              Bespoke Irish Golf Travel Experiences
-            </h2>
-          </div>
-          <nav
-            class="main-navigation"
-            aria-label="Main Navigation Top of Screen"
-          >
-            <!-- Navigation links go here desktop -->
-            <ul>
-              <li>
-                <a href="../index.html">Home</a>
-              </li>
-              <li>
-                <a href="./index.html" class="active-page">Experiences</a>
-              </li>
-              <li>
-                <a href="../consultation/index.html">Bespoke Consultation</a>
-              </li>
-            </ul>
-          </nav>
+
+        <!-- Current time -->
+        <div class="current-time-container">
+          <span class="material-symbols-outlined gold">schedule</span>
+          <span id="current-time"></span>
         </div>
-      </header>
-      <main>
-        <section>
-          <div class="search-intro-container">
-            <div>
-              <h2>Tailored Experiences & Example Itineraries</h2>
-              <p>
-                Here at Emerald Escapes, we deal exclusively with discerning
-                golfers seeking bespoke itineraries for their unforgettable
-                irish golfing adventure. The packages below show prior
-                itineraries we have organised for past parties. They are here to
-                serve as inspiration for your own golfing adventure.
-              </p>
-            </div>
-            <!-- Search bar for experiences -->
-            <div class="search-container">
-              <h3 class="alternate-font-heading gold" id="filter-itineraries">
-                Filter Itineraries
-              </h3>
-              <div class="filter-container">
-                <div class="select-container">
-                  <label for="select-course">Select Courses</label>
-                  <select
-                    id="select-course"
-                    name="course[]"
-                    multiple
-                    placeholder="Search or select courses..."
-                    autocomplete="off"
-                  >
-                    <option value="adare-manor">Adare Manor</option>
-                    <option value="ballybunion">Ballybunion</option>
-                    <option value="ballyliffin">Ballyliffin</option>
-                    <option value="brittas-bay">Brittas Bay</option>
-                    <option value="carne">Carne</option>
-                    <option value="county-sligo">County Sligo</option>
-                    <option value="k-club">K Club</option>
-                    <option value="lahinch">Lahinch</option>
-                    <option value="old-head">Old Head</option>
-                    <option value="portstewart">Portstewart</option>
-                    <option value="portmarnock">Portmarnock</option>
-                    <option value="royal-county-down">Royal County Down</option>
-                    <option value="royal-portrush">Royal Portrush</option>
-                    <option value="st-patricks-links">
-                      St. Patrick's Links
-                    </option>
-                    <option value="tralee">Tralee</option>
-                    <option value="waterville">Waterville</option>
-                  </select>
-                </div>
-                <div class="select-container">
-                  <label for="select-value">Specify a Budget</label>
-                  <select
-                    id="select-value"
-                    name="budget"
-                    placeholder="Specify a budget"
-                    autocomplete="off"
-                  >
-                    <option value="">Any Budget</option>
-                    <option value="5000">Under €5000</option>
-                    <option value="10000">Under €10,000</option>
-                    <option value="15000">Under €15,000</option>
-                    <option value="20000">Under €20,000</option>
-                    <option value="25000">Under €25,000</option>
-                  </select>
-                </div>
-              </div>
-              <div class="card-total gold">
-                <p>Displaying <span id="card-number">15</span> results</p>
-                <button type="button" id="clear-filters">
-                  <span class="material-symbols-outlined">filter_alt_off</span
-                  >Clear Filters
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- Search Results or full example experiences go here -->
-          <div class="search-results">
-            <!-- Slide 1 -->
-            <div
-              class="search-results-card"
-              data-category="old-head lahinch adare-manor tralee ballybunion waterville"
-            >
-              <div class="search-results-card-image full-width">
-                <img
-                  src="../assets/images/old-head-h4.jpg"
-                  alt="Aerial view of Old Head Kinsale Golf Course"
-                />
-                <div class="search-results-card-tag-container">
-                  <span class="text-tag">Air Charter Route</span>
-                  <span class="duration-tag">7 Days &bull; 6 Nights</span>
-                </div>
-                <div class="search-results-card-heading-container">
-                  <h4 class="gold alternate-font-heading section-h3">
-                    Air Charter Route
-                  </h4>
-                  <h3>Helicopter Circuit of Kerry</h3>
-                </div>
-              </div>
-              <div class="search-results-summary center-column">
-                <div>
-                  <span>Bases</span>
-                  Adare Manor<br />Ballybunion
-                </div>
-                <div>
-                  <span>Courses</span>
-                  Old Head<br />Lahinch<br />Adare Manor<br />Tralee<br />Ballybunion<br />Waterville
-                </div>
-                <div>
-                  <span>Transport</span>
-                  <span class="material-symbols-outlined gold">helicopter</span>
-                </div>
-              </div>
-              <div
-                class="search-results-card-text center-column experience-card-bullets"
-              >
-                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-                <p>D1-2: Adare Manor & Lahinch</p>
-                <p>D3-4: Old Head & Waterville</p>
-                <p>D5-6: Ballybunion & Tralee</p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Guaranteed tee time allocation
-                </p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Dedicated Eurocopter EC135 charter
-                </p>
-              </div>
-              <div class="search-results-card-details center-column">
-                <div>
-                  <h5 class="alternate-font-heading">From</h5>
-                  <p>
-                    <span data-price-eur="14800">€14,800</span>
-                    <span class="small-text"> / guest</span>
-                  </p>
-                </div>
-                <a href="../consultation/index.html#consultation-form"
-                  ><span>Enquire</span></a
-                >
-              </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div
-              class="search-results-card"
-              id="adare-manor-base"
-              data-category="lahinch adare-manor tralee ballybunion"
-            >
-              <div class="search-results-card-image full-width">
-                <img
-                  src="../assets/images/golf-at-adare-manor-38-801x447.jpg"
-                  alt="View of Adare Manor from the fairway"
-                />
-                <div class="search-results-card-tag-container">
-                  <span class="text-tag">One luxury base</span>
-                  <span class="duration-tag">6 Days &bull; 5 Nights</span>
-                </div>
-                <div class="search-results-card-heading-container">
-                  <h4 class="gold alternate-font-heading section-h3">
-                    Adare Manor Based
-                  </h4>
-                  <h3>The South West Kingdom</h3>
-                </div>
-              </div>
-              <div class="search-results-summary center-column">
-                <div>
-                  <span>Bases</span>
-                  Adare Manor
-                </div>
-                <div>
-                  <span>Courses</span>
-                  Adare Manor<br />Ballybunion<br />Tralee<br />Lahinch
-                </div>
-                <div>
-                  <span>Transport</span>
-                  <span class="material-symbols-outlined gold">helicopter</span>
-                  <span class="material-symbols-outlined gold"
-                    >airport_shuttle</span
-                  >
-                </div>
-              </div>
-              <div
-                class="search-results-card-text center-column experience-card-bullets"
-              >
-                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-                <p>D1-2: Adare Manor & Ballybunion</p>
-                <p>D3: Adare Manor</p>
-                <p>D4-5: Tralee & Lahinch</p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Guaranteed tee time allocation
-                </p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Flexibility for multiple rounds per day
-                </p>
-              </div>
-              <div class="search-results-card-details center-column">
-                <div>
-                  <h5 class="alternate-font-heading">From</h5>
-                  <p>
-                    <span data-price-eur="6900">€6,900</span>
-                    <span class="small-text"> / guest</span>
-                  </p>
-                </div>
-                <a href="../consultation/index.html#consultation-form"
-                  ><span>Enquire</span></a
-                >
-              </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div
-              class="search-results-card"
-              id="royal-county-down-experience"
-              data-category="royal-portrush portstewart royal-county-down"
-            >
-              <div class="search-results-card-image full-width">
-                <img
-                  src="../assets/images/royal-county-down.jpg"
-                  alt="Aerial view of Royal County Down Golf Course"
-                />
-                <div class="search-results-card-tag-container">
-                  <span class="text-tag">Pure Links</span>
-                  <span class="duration-tag">4 Days &bull; 3 Nights</span>
-                </div>
-                <div class="search-results-card-heading-container">
-                  <h4 class="gold alternate-font-heading section-h3">
-                    Whiskey Experience
-                  </h4>
-                  <h3>Northern Majesty</h3>
-                </div>
-              </div>
-              <div class="search-results-summary center-column">
-                <div>
-                  <span>Bases</span>
-                  Bushmills Inn<br />Slieve Donard
-                </div>
-                <div>
-                  <span>Courses</span>
-                  Royal Portrush<br />Portstewart<br />Royal County Down
-                </div>
-                <div>
-                  <span>Transport</span>
-                  <span class="material-symbols-outlined gold">helicopter</span>
-                  <span class="material-symbols-outlined gold"
-                    >airport_shuttle</span
-                  >
-                </div>
-              </div>
-              <div
-                class="search-results-card-text center-column experience-card-bullets"
-              >
-                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-                <p>D1: Royal Portrush</p>
-                <p>D2: Portstewart</p>
-                <p>D3: Royal County Down</p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Unique Whiskey Experience
-                </p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Play the world's greatest golf course
-                </p>
-              </div>
-              <div class="search-results-card-details center-column">
-                <div>
-                  <h5 class="alternate-font-heading">From</h5>
-                  <p>
-                    <span data-price-eur="4800">€4,800</span>
-                    <span class="small-text"> / guest</span>
-                  </p>
-                </div>
-                <a href="../consultation/index.html#consultation-form"
-                  ><span>Enquire</span></a
-                >
-              </div>
-            </div>
-
-            <!-- Slide 4 -->
-            <div
-              class="search-results-card"
-              id="rosapenna-hotel-golf-resort-base"
-              data-category="st-patricks-links ballyliffin"
-            >
-              <div class="search-results-card-image full-width">
-                <img
-                  src="../assets/images/st-patricks-links.png"
-                  alt="St. Patrick's Links Golf Course from the air"
-                />
-                <div class="search-results-card-tag-container">
-                  <span class="text-tag">Outstanding Beauty</span>
-                  <span class="duration-tag">3 Days &bull; 2 Nights</span>
-                </div>
-                <div class="search-results-card-heading-container">
-                  <h4 class="gold alternate-font-heading section-h3">
-                    Area of Outstanding Beauty
-                  </h4>
-                  <h3>Donegal Discovery</h3>
-                </div>
-              </div>
-              <div class="search-results-summary center-column">
-                <div>
-                  <span>Bases</span>
-                  Rosapenna Hotel & Golf Resort
-                </div>
-                <div>
-                  <span>Courses</span>
-                  St. Patrick's Links<br />Ballyliffin Golf Club Glashedy
-                </div>
-                <div>
-                  <span>Transport</span>
-                  <span class="material-symbols-outlined gold">helicopter</span>
-                  <span class="material-symbols-outlined gold"
-                    >airport_shuttle</span
-                  >
-                </div>
-              </div>
-              <div
-                class="search-results-card-text center-column experience-card-bullets"
-              >
-                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-                <p>D1: St. Patrick's Links</p>
-                <p>D2: Ballyliffin Golf Club Glashedy</p>
-                <p>D3: Rosapenna Hotel & Golf Resort</p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Guaranteed tee time allocation
-                </p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Dedicated Eurocopter EC135 charter
-                </p>
-              </div>
-              <div class="search-results-card-details center-column">
-                <div>
-                  <h5 class="alternate-font-heading">From</h5>
-                  <p>
-                    <span data-price-eur="4500">€4,500</span>
-                    <span class="small-text"> / guest</span>
-                  </p>
-                </div>
-                <a href="../consultation/index.html#consultation-form"
-                  ><span>Enquire</span></a
-                >
-              </div>
-            </div>
-
-            <!-- Slide 5 -->
-            <div
-              class="search-results-card"
-              id="east-coast-experience"
-              data-category="portmarnock brittas-bay k-club"
-            >
-              <div class="search-results-card-image full-width">
-                <img
-                  src="../assets/images/portmarnock2.jpg"
-                  alt="Aerial view of Portmarnock Golf Club"
-                />
-                <div class="search-results-card-tag-container">
-                  <span class="text-tag">Capital Stay</span>
-                  <span class="duration-tag">4 Days &bull; 3 Nights</span>
-                </div>
-                <div class="search-results-card-heading-container">
-                  <h4 class="gold alternate-font-heading section-h3">
-                    City Break
-                  </h4>
-                  <h3>East Coast Elite</h3>
-                </div>
-              </div>
-              <div class="search-results-summary center-column">
-                <div>
-                  <span>Bases</span>
-                  Merrion Hotel, Dublin
-                </div>
-                <div>
-                  <span>Courses</span>
-                  Portmarnock<br />Brittas Bay<br />K-Club
-                </div>
-                <div>
-                  <span>Transport</span>
-                  <span class="material-symbols-outlined gold"
-                    >airport_shuttle</span
-                  >
-                </div>
-              </div>
-              <div
-                class="search-results-card-text center-column experience-card-bullets"
-              >
-                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-                <p>D1: Portmarnock</p>
-                <p>D2: Brittas Bay</p>
-                <p>D3: K-Club</p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Championship Courses
-                </p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Central City Location
-                </p>
-              </div>
-              <div class="search-results-card-details center-column">
-                <div>
-                  <h5 class="alternate-font-heading">From</h5>
-                  <p>
-                    <span data-price-eur="6800">€6,800</span>
-                    <span class="small-text"> / guest</span>
-                  </p>
-                </div>
-                <a href="../consultation/index.html#consultation-form"
-                  ><span>Enquire</span></a
-                >
-              </div>
-            </div>
-
-            <!-- Slide 6 -->
-            <div class="search-results-card" data-category="carne county-sligo">
-              <div class="search-results-card-image full-width">
-                <img
-                  src="../assets/images/Carne-2023-HR-4-scaled.jpg"
-                  alt="Aerial view of Carne Golf Club"
-                />
-                <div class="search-results-card-tag-container">
-                  <span class="text-tag">West Coast</span>
-                  <span class="duration-tag">3 Days &bull; 2 Nights</span>
-                </div>
-                <div class="search-results-card-heading-container">
-                  <h4 class="gold alternate-font-heading section-h3">
-                    Helicopter Hop
-                  </h4>
-                  <h3>Wild Mayo & Sligo</h3>
-                </div>
-              </div>
-              <div class="search-results-summary center-column">
-                <div>
-                  <span>Bases</span>
-                  Mount Falcon Estate
-                </div>
-                <div>
-                  <span>Courses</span>
-                  Carne<br />County Sligo Golf Club
-                </div>
-                <div>
-                  <span>Transport</span>
-                  <span class="material-symbols-outlined gold">helicopter</span>
-                </div>
-              </div>
-              <div
-                class="search-results-card-text center-column experience-card-bullets"
-              >
-                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-                <p>D1: Carne</p>
-                <p>D2: County Sligo Golf Club</p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Weekend Break
-                </p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Dedicated Eurocopter EC135 charter
-                </p>
-              </div>
-              <div class="search-results-card-details center-column">
-                <div>
-                  <h5 class="alternate-font-heading">From</h5>
-                  <p>
-                    <span data-price-eur="4500">€4,500</span>
-                    <span class="small-text"> / guest</span>
-                  </p>
-                </div>
-                <a href="../consultation/index.html#consultation-form"
-                  ><span>Enquire</span></a
-                >
-              </div>
-            </div>
-
-            <!-- Slide 7 -->
-            <div
-              class="search-results-card"
-              data-category="tralee ballybunion waterville"
-            >
-              <div class="search-results-card-image full-width">
-                <img
-                  src="../assets/images/Waterville-35-scaled.jpg"
-                  alt="Aerial view of Waterville Golf Club"
-                />
-                <div class="search-results-card-tag-container">
-                  <span class="text-tag">Killarney</span>
-                  <span class="duration-tag">7 Days &bull; 6 Nights</span>
-                </div>
-                <div class="search-results-card-heading-container">
-                  <h4 class="gold alternate-font-heading section-h3">
-                    Relaxed Pace
-                  </h4>
-                  <h3>The Kerry Coastline</h3>
-                </div>
-              </div>
-              <div class="search-results-summary center-column">
-                <div>
-                  <span>Bases</span>
-                  The Europe Hotel & Resort
-                </div>
-                <div>
-                  <span>Courses</span>
-                  Tralee<br />Ballybunion<br />Waterville
-                </div>
-                <div>
-                  <span>Transport</span>
-                  <span class="material-symbols-outlined gold">helicopter</span>
-                  <span class="material-symbols-outlined gold"
-                    >airport_shuttle</span
-                  >
-                </div>
-              </div>
-              <div
-                class="search-results-card-text center-column experience-card-bullets"
-              >
-                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-                <p>D1-2: Waterville</p>
-                <p>D3-4: Tralee</p>
-                <p>D5-6: Ballybunion</p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Relaxed two day experience at each course
-                </p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Dedicated Caddie Service
-                </p>
-              </div>
-              <div class="search-results-card-details center-column">
-                <div>
-                  <h5 class="alternate-font-heading">From</h5>
-                  <p>
-                    <span data-price-eur="9800">€9,800</span>
-                    <span class="small-text"> / guest</span>
-                  </p>
-                </div>
-                <a href="../consultation/index.html#consultation-form"
-                  ><span>Enquire</span></a
-                >
-              </div>
-            </div>
-
-            <!-- Slide 8 -->
-            <div
-              class="search-results-card"
-              id="lough-eske-castle-base"
-              data-category="county-sligo st-patricks-links ballyliffin royal-portrush"
-            >
-              <div class="search-results-card-image full-width">
-                <img
-                  src="../assets/images/Glashedy7thG_compressed.webp"
-                  alt="Aerial view of Glashedy Golf Course from the 7th hole"
-                />
-                <div class="search-results-card-tag-container">
-                  <span class="text-tag">Air Charter Route</span>
-                  <span class="duration-tag">5 Days &bull; 4 Nights</span>
-                </div>
-                <div class="search-results-card-heading-container">
-                  <h4 class="gold alternate-font-heading section-h3">
-                    Air Charter Route
-                  </h4>
-                  <h3>North West Coastal Sweep</h3>
-                </div>
-              </div>
-              <div class="search-results-summary center-column">
-                <div>
-                  <span>Bases</span>
-                  Lough Eske Castle, Donegal
-                </div>
-                <div>
-                  <span>Courses</span>
-                  County Sligo<br />St. Patrick's Links<br />Ballyliffin<br />Royal
-                  Portrush
-                </div>
-                <div>
-                  <span>Transport</span>
-                  <span class="material-symbols-outlined gold">helicopter</span>
-                </div>
-              </div>
-              <div
-                class="search-results-card-text center-column experience-card-bullets"
-              >
-                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-                <p>D1: County Sligo Golf Club</p>
-                <p>D2: St. Patricks Links</p>
-                <p>D3: Ballyliffin Golf Club Glashedy</p>
-                <p>D4: Royal Portrush</p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Guaranteed tee time allocation
-                </p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Dedicated Eurocopter EC135 charter
-                </p>
-              </div>
-              <div class="search-results-card-details center-column">
-                <div>
-                  <h5 class="alternate-font-heading">From</h5>
-                  <p>
-                    <span data-price-eur="11800">€11,800</span>
-                    <span class="small-text"> / guest</span>
-                  </p>
-                </div>
-                <a href="../consultation/index.html#consultation-form"
-                  ><span>Enquire</span></a
-                >
-              </div>
-            </div>
-
-            <!-- Slide 9 -->
-            <div
-              class="search-results-card"
-              data-category="lahinch adare-manor ballybunion"
-            >
-              <div class="search-results-card-image full-width">
-                <img
-                  src="../assets/images/6-lahinch.jpg"
-                  alt="Aerial view of Lahinch Golf Course"
-                />
-                <div class="search-results-card-tag-container">
-                  <span class="text-tag">Castle Stay</span>
-                  <span class="duration-tag">4 Days &bull; 3 Nights</span>
-                </div>
-                <div class="search-results-card-heading-container">
-                  <h4 class="gold alternate-font-heading section-h3">
-                    County Clare
-                  </h4>
-                  <h3>Shannon Estuary Swing</h3>
-                </div>
-              </div>
-              <div class="search-results-summary center-column">
-                <div>
-                  <span>Bases</span>
-                  Dromoland Castle
-                </div>
-                <div>
-                  <span>Courses</span>
-                  Lahinch<br />Adare Manor<br />Ballybunion
-                </div>
-                <div>
-                  <span>Transport</span>
-                  <span class="material-symbols-outlined gold">helicopter</span>
-                  <span class="material-symbols-outlined gold"
-                    >airport_shuttle</span
-                  >
-                </div>
-              </div>
-              <div
-                class="search-results-card-text center-column experience-card-bullets"
-              >
-                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-                <p>D1: Lahinch Golf Club</p>
-                <p>D2: Adare Manor</p>
-                <p>D3: Ballybunion Golf Course</p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Guaranteed tee time allocation
-                </p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Ryder Cup Host Venue
-                </p>
-              </div>
-              <div class="search-results-card-details center-column">
-                <div>
-                  <h5 class="alternate-font-heading">From</h5>
-                  <p>
-                    <span data-price-eur="8700">€8,700</span>
-                    <span class="small-text"> / guest</span>
-                  </p>
-                </div>
-                <a href="../consultation/index.html#consultation-form"
-                  ><span>Enquire</span></a
-                >
-              </div>
-            </div>
-
-            <!-- Slide 10 -->
-            <div
-              class="search-results-card"
-              id="celtic-and-atlantic-experience"
-              data-category="old-head tralee waterville"
-            >
-              <div class="search-results-card-image full-width">
-                <img
-                  src="../assets/images/old-head-kinsale.webp"
-                  alt="Aerial view of Old Head Kinsale Golf Course"
-                />
-                <div class="search-results-card-tag-container">
-                  <span class="text-tag">City Stay</span>
-                  <span class="duration-tag">4 Days &bull; 3 Nights</span>
-                </div>
-                <div class="search-results-card-heading-container">
-                  <h4 class="gold alternate-font-heading section-h3">
-                    Air Charter Route
-                  </h4>
-                  <h3>The Celtic Sea & Atlantic Link</h3>
-                </div>
-              </div>
-              <div class="search-results-summary center-column">
-                <div>
-                  <span>Bases</span>
-                  Castlemartyr Resort
-                </div>
-                <div>
-                  <span>Courses</span>
-                  Old Head<br />Tralee<br />Waterville
-                </div>
-                <div>
-                  <span>Transport</span>
-                  <span class="material-symbols-outlined gold">helicopter</span>
-                  <span class="material-symbols-outlined gold"
-                    >airport_shuttle</span
-                  >
-                </div>
-              </div>
-              <div
-                class="search-results-card-text center-column experience-card-bullets"
-              >
-                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-                <p>D1: Old Head Kinsale</p>
-                <p>D2: Tralee Golf Course</p>
-                <p>D3: Waterville</p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Dedicated Caddie Experience
-                </p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Dedicated Eurocopter EC135 charter
-                </p>
-              </div>
-              <div class="search-results-card-details center-column">
-                <div>
-                  <h5 class="alternate-font-heading">From</h5>
-                  <p>
-                    <span data-price-eur="9900">€9,900</span>
-                    <span class="small-text"> / guest</span>
-                  </p>
-                </div>
-                <a href="../consultation/index.html#consultation-form"
-                  ><span>Enquire</span></a
-                >
-              </div>
-            </div>
-
-            <!-- Slide 11 -->
-            <div
-              class="search-results-card"
-              data-category="brittas-bay k-club portmarnock royal-county-down"
-            >
-              <div class="search-results-card-image full-width">
-                <img
-                  src="../assets/images/brittas-bay.png"
-                  alt="Aerial view of Brittas Bay"
-                />
-                <div class="search-results-card-tag-container">
-                  <span class="text-tag">Air Charter Route</span>
-                  <span class="duration-tag">5 Days &bull; 4 Nights</span>
-                </div>
-                <div class="search-results-card-heading-container">
-                  <h4 class="gold alternate-font-heading section-h3">
-                    Air Charter Route
-                  </h4>
-                  <h3>Dublin to Down</h3>
-                </div>
-              </div>
-              <div class="search-results-summary center-column">
-                <div>
-                  <span>Bases</span>
-                  The Shelbourne, Dublin
-                </div>
-                <div>
-                  <span>Courses</span>
-                  Brittas Bay<br />K-Club<br />Portmarnock<br />Royal County
-                  Down
-                </div>
-                <div>
-                  <span>Transport</span>
-                  <span class="material-symbols-outlined gold">helicopter</span>
-                </div>
-              </div>
-              <div
-                class="search-results-card-text center-column experience-card-bullets"
-              >
-                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-                <p>D1: Brittas Bay Golf Course</p>
-                <p>D2: K-Club</p>
-                <p>D3: Portmarnock</p>
-                <p>D4: Royal County Down</p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >The Open & Ryder Cup Venues
-                </p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Dedicated Eurocopter EC135 charter
-                </p>
-              </div>
-              <div class="search-results-card-details center-column">
-                <div>
-                  <h5 class="alternate-font-heading">From</h5>
-                  <p>
-                    <span data-price-eur="16800">€16,800</span>
-                    <span class="small-text"> / guest</span>
-                  </p>
-                </div>
-                <a href="../consultation/index.html#consultation-form"
-                  ><span>Enquire</span></a
-                >
-              </div>
-            </div>
-
-            <!-- Slide 12 -->
-            <div
-              class="search-results-card"
-              id="ashford-castle-base"
-              data-category="carne county-sligo lahinch"
-            >
-              <div class="search-results-card-image full-width">
-                <img
-                  src="../assets/images/ashford-castle-exterior-7.webp"
-                  alt="Exterior view of Ashford Castle"
-                />
-                <div class="search-results-card-tag-container">
-                  <span class="text-tag">Ashford Castle</span>
-                  <span class="duration-tag">7 Days &bull; 6 Nights</span>
-                </div>
-                <div class="search-results-card-heading-container">
-                  <h4 class="gold alternate-font-heading section-h3">
-                    Air Charter Route
-                  </h4>
-                  <h3>Helicopter Circuit of Mayo</h3>
-                </div>
-              </div>
-              <div class="search-results-summary center-column">
-                <div>
-                  <span>Bases</span>
-                  Ashford Castle
-                </div>
-                <div>
-                  <span>Courses</span>
-                  Carne<br />County Sligo Golf Club<br />Lahinch
-                </div>
-                <div>
-                  <span>Transport</span>
-                  <span class="material-symbols-outlined gold">helicopter</span>
-                </div>
-              </div>
-              <div
-                class="search-results-card-text center-column experience-card-bullets"
-              >
-                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-                <p>D1: Carne</p>
-                <p>D2: County Sligo Golf Club</p>
-                <p>D3: Lahinch</p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Guaranteed tee time allocation
-                </p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Dedicated Eurocopter EC135 charter
-                </p>
-              </div>
-              <div class="search-results-card-details center-column">
-                <div>
-                  <h5 class="alternate-font-heading">From</h5>
-                  <p>
-                    <span data-price-eur="12600">€12,600</span>
-                    <span class="small-text"> / guest</span>
-                  </p>
-                </div>
-                <a href="../consultation/index.html#consultation-form"
-                  ><span>Enquire</span></a
-                >
-              </div>
-            </div>
-
-            <!-- Slide 13 -->
-            <div
-              class="search-results-card"
-              data-category="portstewart royal-portrush ballyliffin"
-            >
-              <div class="search-results-card-image full-width">
-                <img
-                  src="../assets/images/PortStewart1-85-1.webp"
-                  alt="Aerial view of Port Stewart Golf Course"
-                />
-                <div class="search-results-card-tag-container">
-                  <span class="text-tag">Links Golf</span>
-                  <span class="duration-tag">4 Days &bull; 3 Nights</span>
-                </div>
-                <div class="search-results-card-heading-container">
-                  <h4 class="gold alternate-font-heading section-h3">
-                    Northern Links
-                  </h4>
-                  <h3>Antrim to Donegal Express</h3>
-                </div>
-              </div>
-              <div class="search-results-summary center-column">
-                <div>
-                  <span>Bases</span>
-                  Galgorm Resort
-                </div>
-                <div>
-                  <span>Courses</span>
-                  Portstewart<br />Royal Portrush<br />Ballyliffin Golf Club
-                  Glashedy
-                </div>
-                <div>
-                  <span>Transport</span>
-                  <span class="material-symbols-outlined gold"
-                    >airport_shuttle</span
-                  >
-                </div>
-              </div>
-              <div
-                class="search-results-card-text center-column experience-card-bullets"
-              >
-                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-                <p>D1: Portstewart</p>
-                <p>D2: Royal Portrush</p>
-                <p>D3: Ballyliffin Golf Club Glashedy</p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Guaranteed tee time allocation
-                </p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Dedicated Caddie Experience
-                </p>
-              </div>
-              <div class="search-results-card-details center-column">
-                <div>
-                  <h5 class="alternate-font-heading">From</h5>
-                  <p>
-                    <span data-price-eur="4800">€4,800</span>
-                    <span class="small-text"> / guest</span>
-                  </p>
-                </div>
-                <a href="../consultation/index.html#consultation-form"
-                  ><span>Enquire</span></a
-                >
-              </div>
-            </div>
-
-            <!-- Slide 14 -->
-            <div
-              class="search-results-card"
-              data-category="royal-county-down royal-portrush portstewart st-patricks-links"
-            >
-              <div class="search-results-card-image full-width">
-                <img
-                  src="../assets/images/RPR-Dunluce-Course-1.jpg"
-                  alt="Aerial view of Royal Portrush Golf Course"
-                />
-                <div class="search-results-card-tag-container">
-                  <span class="text-tag">World's #1</span>
-                  <span class="duration-tag">5 Days &bull; 4 Nights</span>
-                </div>
-                <div class="search-results-card-heading-container">
-                  <h4 class="gold alternate-font-heading section-h3">
-                    Air Charter Route
-                  </h4>
-                  <h3>The Grand Northern Arc</h3>
-                </div>
-              </div>
-              <div class="search-results-summary center-column">
-                <div>
-                  <span>Bases</span>
-                  Culloden Estate & Spa
-                </div>
-                <div>
-                  <span>Courses</span>
-                  Royal County Down<br />Royal Portrush<br />Portstewart<br />St.
-                  Patrick's Links
-                </div>
-                <div>
-                  <span>Transport</span>
-                  <span class="material-symbols-outlined gold">helicopter</span>
-                </div>
-              </div>
-              <div
-                class="search-results-card-text center-column experience-card-bullets"
-              >
-                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-                <p>D1: Royal County Down</p>
-                <p>D2: Royal Portrush</p>
-                <p>D3: Portstewart</p>
-                <p>D4: St. Patrick's Links</p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Guaranteed tee time allocation
-                </p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Dedicated Eurocopter EC135 charter
-                </p>
-              </div>
-              <div class="search-results-card-details center-column">
-                <div>
-                  <h5 class="alternate-font-heading">From</h5>
-                  <p>
-                    <span data-price-eur="18800">€18,800</span>
-                    <span class="small-text"> / guest</span>
-                  </p>
-                </div>
-                <a href="../consultation/index.html#consultation-form"
-                  ><span>Enquire</span></a
-                >
-              </div>
-            </div>
-
-            <!-- Slide 15 -->
-            <div
-              class="search-results-card"
-              id="ryder-cup-experience"
-              data-category="adare-manor k-club royal-county-down"
-            >
-              <div class="search-results-card-image full-width">
-                <img
-                  src="../assets/images/golf-at-adare-manor-39-801x447.jpg"
-                  alt="View of Adare Manor from the Golf Course"
-                />
-                <div class="search-results-card-tag-container">
-                  <span class="text-tag">Air Charter Route</span>
-                  <span class="duration-tag">5 Days &bull; 4 Nights</span>
-                </div>
-                <div class="search-results-card-heading-container">
-                  <h4 class="gold alternate-font-heading section-h3">
-                    Competition
-                  </h4>
-                  <h3>Your Ryder Cup</h3>
-                </div>
-              </div>
-              <div class="search-results-summary center-column">
-                <div>
-                  <span>Bases</span>
-                  Adare Manor
-                </div>
-                <div>
-                  <span>Courses</span>
-                  Adare Manor<br />K-Club<br />Royal County Down
-                </div>
-                <div>
-                  <span>Transport</span>
-                  <span class="material-symbols-outlined gold">helicopter</span>
-                </div>
-              </div>
-              <div
-                class="search-results-card-text center-column experience-card-bullets"
-              >
-                <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
-                <p>D1: Adare Manor</p>
-                <p>D2: K-Club</p>
-                <p>D3: Royal County Down</p>
-                <p>D4: Adare Manor</p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Hosts of Ryder Cups and The Open Championship
-                </p>
-                <p>
-                  <span class="material-symbols-outlined gold">verified</span
-                  >Dedicated Eurocopter EC135 charter
-                </p>
-              </div>
-              <div class="search-results-card-details center-column">
-                <div>
-                  <h5 class="alternate-font-heading">From</h5>
-                  <p>
-                    <span data-price-eur="21800">€21,800</span>
-                    <span class="small-text"> / guest</span>
-                  </p>
-                </div>
-                <a href="../consultation/index.html#consultation-form"
-                  ><span>Enquire</span></a
-                >
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Call to action section-->
-        <section class="call-to-action-section">
-          <div>
-            <h3 class="light-gold alternate-font-heading section-h3">
-              Contact Our Private Client Desk
-            </h3>
-            <h2 class="section-h2">Need a Custom Itinerary?</h2>
-            <p>
-              All our experiences are tailored to your unique preferences and
-              requirements. Have a party of 24, no problem. Want to visit
-              opposite ends of Ireland in one trip? We can arrange that too. Our
-              private client desk is here to assist you in crafting the perfect
-              itinerary for your Irish adventure.
-            </p>
-          </div>
-          <div class="call-to-action-btn-container">
-            <a href="../consultation/index.html">
-              Request Bespoke Consultation
-              <span class="material-symbols-outlined">send</span>
-            </a>
-            <a href="../experiences/index.html#filter-itineraries">
-              Explore Experiences
-              <span class="material-symbols-outlined">explore</span>
-            </a>
-          </div>
-          <h3 class="alternate-font-heading section-h3">
-            Confidential Private Client Desk &bull; Guaranteed Ballots &bull;
-            Helicopter or Chauffeur Luxury Travel
-          </h3>
-        </section>
-      </main>
-
-      <footer>
-        <!-- Footer content goes here -->
-        <div class="footer-content">
-          <div>
-            <h2>Emerald Escapes</h2>
-            <p>
-              Curators of ultra-exclusive bespoke Irish golfing experiences.
-              Play the finest courses in the world whilst staying at private
-              estate residences and indulging in unparalleled luxury. Our
-              dedicated team ensures every detail is meticulously crafted for an
-              extraordinary journey.
-            </p>
-          </div>
-          <div class="footer-links">
-            <h3 class="gold alternate-font-heading section-h3">
-              Curated Routes
-            </h3>
-            <a href="./index.html#royal-county-down-experience"
-              >Royal County Down Experience</a
-            >
-            <a href="./index.html#ryder-cup-experience">Ryder Cup Experience</a>
-            <a href="./index.html#east-coast-experience"
-              >East Coast Experience</a
-            >
-            <a href="./index.html#celtic-and-atlantic-experience"
-              >Celtic & Atlantic Experience</a
-            >
-          </div>
-          <div class="footer-links">
-            <h3 class="gold alternate-font-heading section-h3">The Heritage</h3>
-            <a href="./index.html#ashford-castle-base">Ashford Castle Base</a>
-            <a href="./index.html#lough-eske-castle-base"
-              >Lough Eske Castle Base</a
-            >
-            <a href="./index.html#rosapenna-hotel-golf-resort-base"
-              >Rosapenna Hotel Golf Resort Base</a
-            >
-            <a href="./index.html#adare-manor-base">Adare Manor Base</a>
-          </div>
-          <div>
-            <h3 class="gold alternate-font-heading section-h3">
-              Private Ballot Dispatch
-            </h3>
-            <p>
-              Receive confidential briefings on released tee times, private
-              estate openings, and exclusive golfing opportunities.
-            </p>
-            <form id="newsletter-form">
-              <label for="footer-email" class="visually-hidden"
-                >Email Address</label
-              >
-              <input
-                type="email"
-                id="footer-email"
-                name="email"
-                placeholder="name@domain.com"
-                autocomplete="email"
-                maxlength="254"
-                required
-              />
-              <button id="footer-subscribe-btn" type="submit">Subscribe</button>
-            </form>
-            <div class="protection-statement">
-              <span class="material-symbols-outlined gold"
-                >enhanced_encryption</span
-              >
-              <p>
-                Compliant with strict data protection and privacy regulations.
-              </p>
-            </div>
-          </div>
+        <!-- Currency Selector -->
+        <div class="currency-selector-container">
+          <span class="material-symbols-outlined gold">currency_exchange</span>
+          <label for="currency-select" class="visually-hidden">Currency</label>
+          <select id="currency-select" name="currency">
+            <option value="EUR">€ EUR</option>
+            <option value="USD">$ USD</option>
+            <option value="GBP">£ GBP</option>
+          </select>
         </div>
-        <!-- Mobile Nav -->
-        <nav
-          class="mobile-navigation"
-          aria-label="Mobile Navigation Bottom of Screen"
-        >
+      </div>
+      <!-- main logo and navigation container -->
+      <div class="header-row-two">
+        <div class="wordmark-container">
+          <h1>Emerald Escapes</h1>
+          <h2 class="gold alternate-font-heading">
+            Bespoke Irish Golf Travel Experiences
+          </h2>
+        </div>
+        <nav class="main-navigation" aria-label="Main Navigation Top of Screen">
+          <!-- Navigation links desktop -->
           <ul>
-            <!-- Navigation links go here mobile -->
             <li>
-              <a href="../index.html">
-                <span class="material-symbols-outlined">golf_course</span>Home
-              </a>
+              <a href="../index.html">Home</a>
             </li>
             <li>
-              <a href="../experiences/index.html" class="active-page">
-                <span class="material-symbols-outlined">travel_explore</span
-                >Experiences
-              </a>
+              <a href="./index.html" class="active-page">Experiences</a>
             </li>
             <li>
-              <a href="../consultation/index.html">
-                <span class="material-symbols-outlined">calendar_month</span
-                >Consult
-              </a>
+              <a href="../consultation/index.html">Bespoke Consultation</a>
             </li>
           </ul>
         </nav>
-        <!-- Newsletter confirmation modal -->
-        <dialog
-          id="newsletter-modal"
-          class="newsletter-modal"
-          aria-labelledby="newsletter-modal-title"
-        >
-          <div class="newsletter-modal-content">
-            <span class="material-symbols-outlined gold" aria-hidden="true"
-              >mark_email_read</span
-            >
-            <h3 id="newsletter-modal-title">Thank You</h3>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="search-intro-container">
+          <div>
+            <h2>Tailored Experiences & Example Itineraries</h2>
             <p>
-              You have been added to the Private Ballot Dispatch mailing list.
-              Watch your inbox for our next confidential briefing.
+              Here at Emerald Escapes, we deal exclusively with discerning
+              golfers seeking bespoke itineraries for their unforgettable
+              irish golfing adventure. The packages below show prior
+              itineraries we have organised for past parties. They are here to
+              serve as inspiration for your own golfing adventure.
             </p>
-            <button type="button" id="newsletter-modal-close" autofocus>
-              Close
-            </button>
           </div>
-        </dialog>
-      </footer>
-    </div>
-  </body>
+          <!-- Search bar for experiences -->
+          <div class="search-container">
+            <h3 class="alternate-font-heading gold" id="filter-itineraries">
+              Filter Itineraries
+            </h3>
+            <div class="filter-container">
+              <div class="select-container">
+                <label for="select-course">Select Courses</label>
+                <select id="select-course" name="course[]" multiple placeholder="Search or select courses..."
+                  autocomplete="off">
+                  <option value="adare-manor">Adare Manor</option>
+                  <option value="ballybunion">Ballybunion</option>
+                  <option value="ballyliffin">Ballyliffin</option>
+                  <option value="brittas-bay">Brittas Bay</option>
+                  <option value="carne">Carne</option>
+                  <option value="county-sligo">County Sligo</option>
+                  <option value="k-club">K Club</option>
+                  <option value="lahinch">Lahinch</option>
+                  <option value="old-head">Old Head</option>
+                  <option value="portstewart">Portstewart</option>
+                  <option value="portmarnock">Portmarnock</option>
+                  <option value="royal-county-down">Royal County Down</option>
+                  <option value="royal-portrush">Royal Portrush</option>
+                  <option value="st-patricks-links">
+                    St. Patrick's Links
+                  </option>
+                  <option value="tralee">Tralee</option>
+                  <option value="waterville">Waterville</option>
+                </select>
+              </div>
+              <div class="select-container">
+                <label for="select-value">Specify a Budget</label>
+                <select id="select-value" name="budget" placeholder="Specify a budget" autocomplete="off">
+                  <option value="">Any Budget</option>
+                  <option value="5000">Under €5000</option>
+                  <option value="10000">Under €10,000</option>
+                  <option value="15000">Under €15,000</option>
+                  <option value="20000">Under €20,000</option>
+                  <option value="25000">Under €25,000</option>
+                </select>
+              </div>
+            </div>
+            <div class="card-total gold">
+              <p>Displaying <span id="card-number">15</span> results</p>
+              <button type="button" id="clear-filters">
+                <span class="material-symbols-outlined">filter_alt_off</span>Clear Filters
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Search Results or full example experiences go here -->
+        <div class="search-results">
+          <!-- Slide 1 -->
+          <div class="search-results-card" data-category="old-head lahinch adare-manor tralee ballybunion waterville">
+            <div class="search-results-card-image full-width">
+              <img src="../assets/images/old-head-h4.jpg" alt="Aerial view of Old Head Kinsale Golf Course" />
+              <div class="search-results-card-tag-container">
+                <span class="text-tag">Air Charter Route</span>
+                <span class="duration-tag">7 Days &bull; 6 Nights</span>
+              </div>
+              <div class="search-results-card-heading-container">
+                <h4 class="gold alternate-font-heading section-h3">
+                  Air Charter Route
+                </h4>
+                <h3>Helicopter Circuit of Kerry</h3>
+              </div>
+            </div>
+            <div class="search-results-summary center-column">
+              <div>
+                <span>Bases</span>
+                Adare Manor<br />Ballybunion
+              </div>
+              <div>
+                <span>Courses</span>
+                Old Head<br />Lahinch<br />Adare Manor<br />Tralee<br />Ballybunion<br />Waterville
+              </div>
+              <div>
+                <span>Transport</span>
+                <span class="material-symbols-outlined gold">helicopter</span>
+              </div>
+            </div>
+            <div class="search-results-card-text center-column experience-card-bullets">
+              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+              <p>D1-2: Adare Manor & Lahinch</p>
+              <p>D3-4: Old Head & Waterville</p>
+              <p>D5-6: Ballybunion & Tralee</p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Guaranteed tee time allocation
+              </p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Dedicated Eurocopter EC135 charter
+              </p>
+            </div>
+            <div class="search-results-card-details center-column">
+              <div>
+                <h5 class="alternate-font-heading">From</h5>
+                <p>
+                  <span data-price-eur="14800">€14,800</span>
+                  <span class="small-text"> / guest</span>
+                </p>
+              </div>
+              <a href="../consultation/index.html#consultation-form"><span>Enquire</span></a>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="search-results-card" id="adare-manor-base" data-category="lahinch adare-manor tralee ballybunion">
+            <div class="search-results-card-image full-width">
+              <img src="../assets/images/golf-at-adare-manor-38-801x447.jpg"
+                alt="View of Adare Manor from the fairway" />
+              <div class="search-results-card-tag-container">
+                <span class="text-tag">One luxury base</span>
+                <span class="duration-tag">6 Days &bull; 5 Nights</span>
+              </div>
+              <div class="search-results-card-heading-container">
+                <h4 class="gold alternate-font-heading section-h3">
+                  Adare Manor Based
+                </h4>
+                <h3>The South West Kingdom</h3>
+              </div>
+            </div>
+            <div class="search-results-summary center-column">
+              <div>
+                <span>Bases</span>
+                Adare Manor
+              </div>
+              <div>
+                <span>Courses</span>
+                Adare Manor<br />Ballybunion<br />Tralee<br />Lahinch
+              </div>
+              <div>
+                <span>Transport</span>
+                <span class="material-symbols-outlined gold">helicopter</span>
+                <span class="material-symbols-outlined gold">airport_shuttle</span>
+              </div>
+            </div>
+            <div class="search-results-card-text center-column experience-card-bullets">
+              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+              <p>D1-2: Adare Manor & Ballybunion</p>
+              <p>D3: Adare Manor</p>
+              <p>D4-5: Tralee & Lahinch</p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Guaranteed tee time allocation
+              </p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Flexibility for multiple rounds per day
+              </p>
+            </div>
+            <div class="search-results-card-details center-column">
+              <div>
+                <h5 class="alternate-font-heading">From</h5>
+                <p>
+                  <span data-price-eur="6900">€6,900</span>
+                  <span class="small-text"> / guest</span>
+                </p>
+              </div>
+              <a href="../consultation/index.html#consultation-form"><span>Enquire</span></a>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="search-results-card" id="royal-county-down-experience"
+            data-category="royal-portrush portstewart royal-county-down">
+            <div class="search-results-card-image full-width">
+              <img src="../assets/images/royal-county-down.jpg" alt="Aerial view of Royal County Down Golf Course" />
+              <div class="search-results-card-tag-container">
+                <span class="text-tag">Pure Links</span>
+                <span class="duration-tag">4 Days &bull; 3 Nights</span>
+              </div>
+              <div class="search-results-card-heading-container">
+                <h4 class="gold alternate-font-heading section-h3">
+                  Whiskey Experience
+                </h4>
+                <h3>Northern Majesty</h3>
+              </div>
+            </div>
+            <div class="search-results-summary center-column">
+              <div>
+                <span>Bases</span>
+                Bushmills Inn<br />Slieve Donard
+              </div>
+              <div>
+                <span>Courses</span>
+                Royal Portrush<br />Portstewart<br />Royal County Down
+              </div>
+              <div>
+                <span>Transport</span>
+                <span class="material-symbols-outlined gold">helicopter</span>
+                <span class="material-symbols-outlined gold">airport_shuttle</span>
+              </div>
+            </div>
+            <div class="search-results-card-text center-column experience-card-bullets">
+              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+              <p>D1: Royal Portrush</p>
+              <p>D2: Portstewart</p>
+              <p>D3: Royal County Down</p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Unique Whiskey Experience
+              </p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Play the world's greatest golf course
+              </p>
+            </div>
+            <div class="search-results-card-details center-column">
+              <div>
+                <h5 class="alternate-font-heading">From</h5>
+                <p>
+                  <span data-price-eur="4800">€4,800</span>
+                  <span class="small-text"> / guest</span>
+                </p>
+              </div>
+              <a href="../consultation/index.html#consultation-form"><span>Enquire</span></a>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="search-results-card" id="rosapenna-hotel-golf-resort-base"
+            data-category="st-patricks-links ballyliffin">
+            <div class="search-results-card-image full-width">
+              <img src="../assets/images/st-patricks-links.png" alt="St. Patrick's Links Golf Course from the air" />
+              <div class="search-results-card-tag-container">
+                <span class="text-tag">Outstanding Beauty</span>
+                <span class="duration-tag">3 Days &bull; 2 Nights</span>
+              </div>
+              <div class="search-results-card-heading-container">
+                <h4 class="gold alternate-font-heading section-h3">
+                  Area of Outstanding Beauty
+                </h4>
+                <h3>Donegal Discovery</h3>
+              </div>
+            </div>
+            <div class="search-results-summary center-column">
+              <div>
+                <span>Bases</span>
+                Rosapenna Hotel & Golf Resort
+              </div>
+              <div>
+                <span>Courses</span>
+                St. Patrick's Links<br />Ballyliffin Golf Club Glashedy
+              </div>
+              <div>
+                <span>Transport</span>
+                <span class="material-symbols-outlined gold">helicopter</span>
+                <span class="material-symbols-outlined gold">airport_shuttle</span>
+              </div>
+            </div>
+            <div class="search-results-card-text center-column experience-card-bullets">
+              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+              <p>D1: St. Patrick's Links</p>
+              <p>D2: Ballyliffin Golf Club Glashedy</p>
+              <p>D3: Rosapenna Hotel & Golf Resort</p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Guaranteed tee time allocation
+              </p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Dedicated Eurocopter EC135 charter
+              </p>
+            </div>
+            <div class="search-results-card-details center-column">
+              <div>
+                <h5 class="alternate-font-heading">From</h5>
+                <p>
+                  <span data-price-eur="4500">€4,500</span>
+                  <span class="small-text"> / guest</span>
+                </p>
+              </div>
+              <a href="../consultation/index.html#consultation-form"><span>Enquire</span></a>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="search-results-card" id="east-coast-experience" data-category="portmarnock brittas-bay k-club">
+            <div class="search-results-card-image full-width">
+              <img src="../assets/images/portmarnock2.jpg" alt="Aerial view of Portmarnock Golf Club" />
+              <div class="search-results-card-tag-container">
+                <span class="text-tag">Capital Stay</span>
+                <span class="duration-tag">4 Days &bull; 3 Nights</span>
+              </div>
+              <div class="search-results-card-heading-container">
+                <h4 class="gold alternate-font-heading section-h3">
+                  City Break
+                </h4>
+                <h3>East Coast Elite</h3>
+              </div>
+            </div>
+            <div class="search-results-summary center-column">
+              <div>
+                <span>Bases</span>
+                Merrion Hotel, Dublin
+              </div>
+              <div>
+                <span>Courses</span>
+                Portmarnock<br />Brittas Bay<br />K-Club
+              </div>
+              <div>
+                <span>Transport</span>
+                <span class="material-symbols-outlined gold">airport_shuttle</span>
+              </div>
+            </div>
+            <div class="search-results-card-text center-column experience-card-bullets">
+              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+              <p>D1: Portmarnock</p>
+              <p>D2: Brittas Bay</p>
+              <p>D3: K-Club</p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Championship Courses
+              </p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Central City Location
+              </p>
+            </div>
+            <div class="search-results-card-details center-column">
+              <div>
+                <h5 class="alternate-font-heading">From</h5>
+                <p>
+                  <span data-price-eur="6800">€6,800</span>
+                  <span class="small-text"> / guest</span>
+                </p>
+              </div>
+              <a href="../consultation/index.html#consultation-form"><span>Enquire</span></a>
+            </div>
+          </div>
+
+          <!-- Slide 6 -->
+          <div class="search-results-card" data-category="carne county-sligo">
+            <div class="search-results-card-image full-width">
+              <img src="../assets/images/Carne-2023-HR-4-scaled.jpg" alt="Aerial view of Carne Golf Club" />
+              <div class="search-results-card-tag-container">
+                <span class="text-tag">West Coast</span>
+                <span class="duration-tag">3 Days &bull; 2 Nights</span>
+              </div>
+              <div class="search-results-card-heading-container">
+                <h4 class="gold alternate-font-heading section-h3">
+                  Helicopter Hop
+                </h4>
+                <h3>Wild Mayo & Sligo</h3>
+              </div>
+            </div>
+            <div class="search-results-summary center-column">
+              <div>
+                <span>Bases</span>
+                Mount Falcon Estate
+              </div>
+              <div>
+                <span>Courses</span>
+                Carne<br />County Sligo Golf Club
+              </div>
+              <div>
+                <span>Transport</span>
+                <span class="material-symbols-outlined gold">helicopter</span>
+              </div>
+            </div>
+            <div class="search-results-card-text center-column experience-card-bullets">
+              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+              <p>D1: Carne</p>
+              <p>D2: County Sligo Golf Club</p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Weekend Break
+              </p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Dedicated Eurocopter EC135 charter
+              </p>
+            </div>
+            <div class="search-results-card-details center-column">
+              <div>
+                <h5 class="alternate-font-heading">From</h5>
+                <p>
+                  <span data-price-eur="4500">€4,500</span>
+                  <span class="small-text"> / guest</span>
+                </p>
+              </div>
+              <a href="../consultation/index.html#consultation-form"><span>Enquire</span></a>
+            </div>
+          </div>
+
+          <!-- Slide 7 -->
+          <div class="search-results-card" data-category="tralee ballybunion waterville">
+            <div class="search-results-card-image full-width">
+              <img src="../assets/images/Waterville-35-scaled.jpg" alt="Aerial view of Waterville Golf Club" />
+              <div class="search-results-card-tag-container">
+                <span class="text-tag">Killarney</span>
+                <span class="duration-tag">7 Days &bull; 6 Nights</span>
+              </div>
+              <div class="search-results-card-heading-container">
+                <h4 class="gold alternate-font-heading section-h3">
+                  Relaxed Pace
+                </h4>
+                <h3>The Kerry Coastline</h3>
+              </div>
+            </div>
+            <div class="search-results-summary center-column">
+              <div>
+                <span>Bases</span>
+                The Europe Hotel & Resort
+              </div>
+              <div>
+                <span>Courses</span>
+                Tralee<br />Ballybunion<br />Waterville
+              </div>
+              <div>
+                <span>Transport</span>
+                <span class="material-symbols-outlined gold">helicopter</span>
+                <span class="material-symbols-outlined gold">airport_shuttle</span>
+              </div>
+            </div>
+            <div class="search-results-card-text center-column experience-card-bullets">
+              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+              <p>D1-2: Waterville</p>
+              <p>D3-4: Tralee</p>
+              <p>D5-6: Ballybunion</p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Relaxed two day experience at each course
+              </p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Dedicated Caddie Service
+              </p>
+            </div>
+            <div class="search-results-card-details center-column">
+              <div>
+                <h5 class="alternate-font-heading">From</h5>
+                <p>
+                  <span data-price-eur="9800">€9,800</span>
+                  <span class="small-text"> / guest</span>
+                </p>
+              </div>
+              <a href="../consultation/index.html#consultation-form"><span>Enquire</span></a>
+            </div>
+          </div>
+
+          <!-- Slide 8 -->
+          <div class="search-results-card" id="lough-eske-castle-base"
+            data-category="county-sligo st-patricks-links ballyliffin royal-portrush">
+            <div class="search-results-card-image full-width">
+              <img src="../assets/images/Glashedy7thG_compressed.webp"
+                alt="Aerial view of Glashedy Golf Course from the 7th hole" />
+              <div class="search-results-card-tag-container">
+                <span class="text-tag">Air Charter Route</span>
+                <span class="duration-tag">5 Days &bull; 4 Nights</span>
+              </div>
+              <div class="search-results-card-heading-container">
+                <h4 class="gold alternate-font-heading section-h3">
+                  Air Charter Route
+                </h4>
+                <h3>North West Coastal Sweep</h3>
+              </div>
+            </div>
+            <div class="search-results-summary center-column">
+              <div>
+                <span>Bases</span>
+                Lough Eske Castle, Donegal
+              </div>
+              <div>
+                <span>Courses</span>
+                County Sligo<br />St. Patrick's Links<br />Ballyliffin<br />Royal
+                Portrush
+              </div>
+              <div>
+                <span>Transport</span>
+                <span class="material-symbols-outlined gold">helicopter</span>
+              </div>
+            </div>
+            <div class="search-results-card-text center-column experience-card-bullets">
+              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+              <p>D1: County Sligo Golf Club</p>
+              <p>D2: St. Patricks Links</p>
+              <p>D3: Ballyliffin Golf Club Glashedy</p>
+              <p>D4: Royal Portrush</p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Guaranteed tee time allocation
+              </p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Dedicated Eurocopter EC135 charter
+              </p>
+            </div>
+            <div class="search-results-card-details center-column">
+              <div>
+                <h5 class="alternate-font-heading">From</h5>
+                <p>
+                  <span data-price-eur="11800">€11,800</span>
+                  <span class="small-text"> / guest</span>
+                </p>
+              </div>
+              <a href="../consultation/index.html#consultation-form"><span>Enquire</span></a>
+            </div>
+          </div>
+
+          <!-- Slide 9 -->
+          <div class="search-results-card" data-category="lahinch adare-manor ballybunion">
+            <div class="search-results-card-image full-width">
+              <img src="../assets/images/6-lahinch.jpg" alt="Aerial view of Lahinch Golf Course" />
+              <div class="search-results-card-tag-container">
+                <span class="text-tag">Castle Stay</span>
+                <span class="duration-tag">4 Days &bull; 3 Nights</span>
+              </div>
+              <div class="search-results-card-heading-container">
+                <h4 class="gold alternate-font-heading section-h3">
+                  County Clare
+                </h4>
+                <h3>Shannon Estuary Swing</h3>
+              </div>
+            </div>
+            <div class="search-results-summary center-column">
+              <div>
+                <span>Bases</span>
+                Dromoland Castle
+              </div>
+              <div>
+                <span>Courses</span>
+                Lahinch<br />Adare Manor<br />Ballybunion
+              </div>
+              <div>
+                <span>Transport</span>
+                <span class="material-symbols-outlined gold">helicopter</span>
+                <span class="material-symbols-outlined gold">airport_shuttle</span>
+              </div>
+            </div>
+            <div class="search-results-card-text center-column experience-card-bullets">
+              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+              <p>D1: Lahinch Golf Club</p>
+              <p>D2: Adare Manor</p>
+              <p>D3: Ballybunion Golf Course</p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Guaranteed tee time allocation
+              </p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Ryder Cup Host Venue
+              </p>
+            </div>
+            <div class="search-results-card-details center-column">
+              <div>
+                <h5 class="alternate-font-heading">From</h5>
+                <p>
+                  <span data-price-eur="8700">€8,700</span>
+                  <span class="small-text"> / guest</span>
+                </p>
+              </div>
+              <a href="../consultation/index.html#consultation-form"><span>Enquire</span></a>
+            </div>
+          </div>
+
+          <!-- Slide 10 -->
+          <div class="search-results-card" id="celtic-and-atlantic-experience"
+            data-category="old-head tralee waterville">
+            <div class="search-results-card-image full-width">
+              <img src="../assets/images/old-head-kinsale.webp" alt="Aerial view of Old Head Kinsale Golf Course" />
+              <div class="search-results-card-tag-container">
+                <span class="text-tag">City Stay</span>
+                <span class="duration-tag">4 Days &bull; 3 Nights</span>
+              </div>
+              <div class="search-results-card-heading-container">
+                <h4 class="gold alternate-font-heading section-h3">
+                  Air Charter Route
+                </h4>
+                <h3>The Celtic Sea & Atlantic Link</h3>
+              </div>
+            </div>
+            <div class="search-results-summary center-column">
+              <div>
+                <span>Bases</span>
+                Castlemartyr Resort
+              </div>
+              <div>
+                <span>Courses</span>
+                Old Head<br />Tralee<br />Waterville
+              </div>
+              <div>
+                <span>Transport</span>
+                <span class="material-symbols-outlined gold">helicopter</span>
+                <span class="material-symbols-outlined gold">airport_shuttle</span>
+              </div>
+            </div>
+            <div class="search-results-card-text center-column experience-card-bullets">
+              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+              <p>D1: Old Head Kinsale</p>
+              <p>D2: Tralee Golf Course</p>
+              <p>D3: Waterville</p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Dedicated Caddie Experience
+              </p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Dedicated Eurocopter EC135 charter
+              </p>
+            </div>
+            <div class="search-results-card-details center-column">
+              <div>
+                <h5 class="alternate-font-heading">From</h5>
+                <p>
+                  <span data-price-eur="9900">€9,900</span>
+                  <span class="small-text"> / guest</span>
+                </p>
+              </div>
+              <a href="../consultation/index.html#consultation-form"><span>Enquire</span></a>
+            </div>
+          </div>
+
+          <!-- Slide 11 -->
+          <div class="search-results-card" data-category="brittas-bay k-club portmarnock royal-county-down">
+            <div class="search-results-card-image full-width">
+              <img src="../assets/images/brittas-bay.png" alt="Aerial view of Brittas Bay" />
+              <div class="search-results-card-tag-container">
+                <span class="text-tag">Air Charter Route</span>
+                <span class="duration-tag">5 Days &bull; 4 Nights</span>
+              </div>
+              <div class="search-results-card-heading-container">
+                <h4 class="gold alternate-font-heading section-h3">
+                  Air Charter Route
+                </h4>
+                <h3>Dublin to Down</h3>
+              </div>
+            </div>
+            <div class="search-results-summary center-column">
+              <div>
+                <span>Bases</span>
+                The Shelbourne, Dublin
+              </div>
+              <div>
+                <span>Courses</span>
+                Brittas Bay<br />K-Club<br />Portmarnock<br />Royal County
+                Down
+              </div>
+              <div>
+                <span>Transport</span>
+                <span class="material-symbols-outlined gold">helicopter</span>
+              </div>
+            </div>
+            <div class="search-results-card-text center-column experience-card-bullets">
+              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+              <p>D1: Brittas Bay Golf Course</p>
+              <p>D2: K-Club</p>
+              <p>D3: Portmarnock</p>
+              <p>D4: Royal County Down</p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>The Open & Ryder Cup Venues
+              </p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Dedicated Eurocopter EC135 charter
+              </p>
+            </div>
+            <div class="search-results-card-details center-column">
+              <div>
+                <h5 class="alternate-font-heading">From</h5>
+                <p>
+                  <span data-price-eur="16800">€16,800</span>
+                  <span class="small-text"> / guest</span>
+                </p>
+              </div>
+              <a href="../consultation/index.html#consultation-form"><span>Enquire</span></a>
+            </div>
+          </div>
+
+          <!-- Slide 12 -->
+          <div class="search-results-card" id="ashford-castle-base" data-category="carne county-sligo lahinch">
+            <div class="search-results-card-image full-width">
+              <img src="../assets/images/ashford-castle-exterior-7.webp" alt="Exterior view of Ashford Castle" />
+              <div class="search-results-card-tag-container">
+                <span class="text-tag">Ashford Castle</span>
+                <span class="duration-tag">7 Days &bull; 6 Nights</span>
+              </div>
+              <div class="search-results-card-heading-container">
+                <h4 class="gold alternate-font-heading section-h3">
+                  Air Charter Route
+                </h4>
+                <h3>Helicopter Circuit of Mayo</h3>
+              </div>
+            </div>
+            <div class="search-results-summary center-column">
+              <div>
+                <span>Bases</span>
+                Ashford Castle
+              </div>
+              <div>
+                <span>Courses</span>
+                Carne<br />County Sligo Golf Club<br />Lahinch
+              </div>
+              <div>
+                <span>Transport</span>
+                <span class="material-symbols-outlined gold">helicopter</span>
+              </div>
+            </div>
+            <div class="search-results-card-text center-column experience-card-bullets">
+              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+              <p>D1: Carne</p>
+              <p>D2: County Sligo Golf Club</p>
+              <p>D3: Lahinch</p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Guaranteed tee time allocation
+              </p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Dedicated Eurocopter EC135 charter
+              </p>
+            </div>
+            <div class="search-results-card-details center-column">
+              <div>
+                <h5 class="alternate-font-heading">From</h5>
+                <p>
+                  <span data-price-eur="12600">€12,600</span>
+                  <span class="small-text"> / guest</span>
+                </p>
+              </div>
+              <a href="../consultation/index.html#consultation-form"><span>Enquire</span></a>
+            </div>
+          </div>
+
+          <!-- Slide 13 -->
+          <div class="search-results-card" data-category="portstewart royal-portrush ballyliffin">
+            <div class="search-results-card-image full-width">
+              <img src="../assets/images/PortStewart1-85-1.webp" alt="Aerial view of Port Stewart Golf Course" />
+              <div class="search-results-card-tag-container">
+                <span class="text-tag">Links Golf</span>
+                <span class="duration-tag">4 Days &bull; 3 Nights</span>
+              </div>
+              <div class="search-results-card-heading-container">
+                <h4 class="gold alternate-font-heading section-h3">
+                  Northern Links
+                </h4>
+                <h3>Antrim to Donegal Express</h3>
+              </div>
+            </div>
+            <div class="search-results-summary center-column">
+              <div>
+                <span>Bases</span>
+                Galgorm Resort
+              </div>
+              <div>
+                <span>Courses</span>
+                Portstewart<br />Royal Portrush<br />Ballyliffin Golf Club
+                Glashedy
+              </div>
+              <div>
+                <span>Transport</span>
+                <span class="material-symbols-outlined gold">airport_shuttle</span>
+              </div>
+            </div>
+            <div class="search-results-card-text center-column experience-card-bullets">
+              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+              <p>D1: Portstewart</p>
+              <p>D2: Royal Portrush</p>
+              <p>D3: Ballyliffin Golf Club Glashedy</p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Guaranteed tee time allocation
+              </p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Dedicated Caddie Experience
+              </p>
+            </div>
+            <div class="search-results-card-details center-column">
+              <div>
+                <h5 class="alternate-font-heading">From</h5>
+                <p>
+                  <span data-price-eur="4800">€4,800</span>
+                  <span class="small-text"> / guest</span>
+                </p>
+              </div>
+              <a href="../consultation/index.html#consultation-form"><span>Enquire</span></a>
+            </div>
+          </div>
+
+          <!-- Slide 14 -->
+          <div class="search-results-card"
+            data-category="royal-county-down royal-portrush portstewart st-patricks-links">
+            <div class="search-results-card-image full-width">
+              <img src="../assets/images/RPR-Dunluce-Course-1.jpg" alt="Aerial view of Royal Portrush Golf Course" />
+              <div class="search-results-card-tag-container">
+                <span class="text-tag">World's #1</span>
+                <span class="duration-tag">5 Days &bull; 4 Nights</span>
+              </div>
+              <div class="search-results-card-heading-container">
+                <h4 class="gold alternate-font-heading section-h3">
+                  Air Charter Route
+                </h4>
+                <h3>The Grand Northern Arc</h3>
+              </div>
+            </div>
+            <div class="search-results-summary center-column">
+              <div>
+                <span>Bases</span>
+                Culloden Estate & Spa
+              </div>
+              <div>
+                <span>Courses</span>
+                Royal County Down<br />Royal Portrush<br />Portstewart<br />St.
+                Patrick's Links
+              </div>
+              <div>
+                <span>Transport</span>
+                <span class="material-symbols-outlined gold">helicopter</span>
+              </div>
+            </div>
+            <div class="search-results-card-text center-column experience-card-bullets">
+              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+              <p>D1: Royal County Down</p>
+              <p>D2: Royal Portrush</p>
+              <p>D3: Portstewart</p>
+              <p>D4: St. Patrick's Links</p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Guaranteed tee time allocation
+              </p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Dedicated Eurocopter EC135 charter
+              </p>
+            </div>
+            <div class="search-results-card-details center-column">
+              <div>
+                <h5 class="alternate-font-heading">From</h5>
+                <p>
+                  <span data-price-eur="18800">€18,800</span>
+                  <span class="small-text"> / guest</span>
+                </p>
+              </div>
+              <a href="../consultation/index.html#consultation-form"><span>Enquire</span></a>
+            </div>
+          </div>
+
+          <!-- Slide 15 -->
+          <div class="search-results-card" id="ryder-cup-experience"
+            data-category="adare-manor k-club royal-county-down">
+            <div class="search-results-card-image full-width">
+              <img src="../assets/images/golf-at-adare-manor-39-801x447.jpg"
+                alt="View of Adare Manor from the Golf Course" />
+              <div class="search-results-card-tag-container">
+                <span class="text-tag">Air Charter Route</span>
+                <span class="duration-tag">5 Days &bull; 4 Nights</span>
+              </div>
+              <div class="search-results-card-heading-container">
+                <h4 class="gold alternate-font-heading section-h3">
+                  Competition
+                </h4>
+                <h3>Your Ryder Cup</h3>
+              </div>
+            </div>
+            <div class="search-results-summary center-column">
+              <div>
+                <span>Bases</span>
+                Adare Manor
+              </div>
+              <div>
+                <span>Courses</span>
+                Adare Manor<br />K-Club<br />Royal County Down
+              </div>
+              <div>
+                <span>Transport</span>
+                <span class="material-symbols-outlined gold">helicopter</span>
+              </div>
+            </div>
+            <div class="search-results-card-text center-column experience-card-bullets">
+              <h4 class="alternate-font-heading gold">Milestone Sequence</h4>
+              <p>D1: Adare Manor</p>
+              <p>D2: K-Club</p>
+              <p>D3: Royal County Down</p>
+              <p>D4: Adare Manor</p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Hosts of Ryder Cups and The Open
+                Championship
+              </p>
+              <p>
+                <span class="material-symbols-outlined gold">verified</span>Dedicated Eurocopter EC135 charter
+              </p>
+            </div>
+            <div class="search-results-card-details center-column">
+              <div>
+                <h5 class="alternate-font-heading">From</h5>
+                <p>
+                  <span data-price-eur="21800">€21,800</span>
+                  <span class="small-text"> / guest</span>
+                </p>
+              </div>
+              <a href="../consultation/index.html#consultation-form"><span>Enquire</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Call to action section-->
+      <section class="call-to-action-section">
+        <div>
+          <h3 class="light-gold alternate-font-heading section-h3">
+            Contact Our Private Client Desk
+          </h3>
+          <h2 class="section-h2">Need a Custom Itinerary?</h2>
+          <p>
+            All our experiences are tailored to your unique preferences and
+            requirements. Have a party of 24, no problem. Want to visit
+            opposite ends of Ireland in one trip? We can arrange that too. Our
+            private client desk is here to assist you in crafting the perfect
+            itinerary for your Irish adventure.
+          </p>
+        </div>
+        <div class="call-to-action-btn-container">
+          <a href="../consultation/index.html">
+            Request Bespoke Consultation
+            <span class="material-symbols-outlined">send</span>
+          </a>
+          <a href="../experiences/index.html#filter-itineraries">
+            Explore Experiences
+            <span class="material-symbols-outlined">explore</span>
+          </a>
+        </div>
+        <h3 class="alternate-font-heading section-h3">
+          Confidential Private Client Desk &bull; Guaranteed Ballots &bull;
+          Helicopter or Chauffeur Luxury Travel
+        </h3>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div>
+          <h2>Emerald Escapes</h2>
+          <p>
+            Curators of ultra-exclusive bespoke Irish golfing experiences.
+            Play the finest courses in the world whilst staying at private
+            estate residences and indulging in unparalleled luxury. Our
+            dedicated team ensures every detail is meticulously crafted for an
+            extraordinary journey.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h3 class="gold alternate-font-heading section-h3">
+            Curated Routes
+          </h3>
+          <a href="./index.html#royal-county-down-experience">Royal County Down Experience</a>
+          <a href="./index.html#ryder-cup-experience">Ryder Cup Experience</a>
+          <a href="./index.html#east-coast-experience">East Coast Experience</a>
+          <a href="./index.html#celtic-and-atlantic-experience">Celtic & Atlantic Experience</a>
+        </div>
+        <div class="footer-links">
+          <h3 class="gold alternate-font-heading section-h3">The Heritage</h3>
+          <a href="./index.html#ashford-castle-base">Ashford Castle Base</a>
+          <a href="./index.html#lough-eske-castle-base">Lough Eske Castle Base</a>
+          <a href="./index.html#rosapenna-hotel-golf-resort-base">Rosapenna Hotel Golf Resort Base</a>
+          <a href="./index.html#adare-manor-base">Adare Manor Base</a>
+        </div>
+        <div>
+          <h3 class="gold alternate-font-heading section-h3">
+            Private Ballot Dispatch
+          </h3>
+          <p>
+            Receive confidential briefings on released tee times, private
+            estate openings, and exclusive golfing opportunities.
+          </p>
+          <form id="newsletter-form">
+            <label for="footer-email" class="visually-hidden">Email Address</label>
+            <input type="email" id="footer-email" name="email" placeholder="name@domain.com" autocomplete="email"
+              maxlength="254" required />
+            <button id="footer-subscribe-btn" type="submit">Subscribe</button>
+          </form>
+          <div class="protection-statement">
+            <span class="material-symbols-outlined gold">enhanced_encryption</span>
+            <p>
+              Compliant with strict data protection and privacy regulations.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Nav -->
+      <nav class="mobile-navigation" aria-label="Mobile Navigation Bottom of Screen">
+        <ul>
+          <!-- Navigation links mobile -->
+          <li>
+            <a href="../index.html">
+              <span class="material-symbols-outlined">golf_course</span>Home
+            </a>
+          </li>
+          <li>
+            <a href="../experiences/index.html" class="active-page">
+              <span class="material-symbols-outlined">travel_explore</span>Experiences
+            </a>
+          </li>
+          <li>
+            <a href="../consultation/index.html">
+              <span class="material-symbols-outlined">calendar_month</span>Consult
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Newsletter confirmation modal -->
+      <dialog id="newsletter-modal" class="newsletter-modal" aria-labelledby="newsletter-modal-title">
+        <div class="newsletter-modal-content">
+          <span class="material-symbols-outlined gold" aria-hidden="true">mark_email_read</span>
+          <h3 id="newsletter-modal-title">Thank You</h3>
+          <p>
+            You have been added to the Private Ballot Dispatch mailing list.
+            Watch your inbox for our next confidential briefing.
+          </p>
+          <button type="button" id="newsletter-modal-close" autofocus>
+            Close
+          </button>
+        </div>
+      </dialog>
+    </footer>
+  </div>
+</body>
+
 </html>

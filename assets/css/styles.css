@@ -81,7 +81,7 @@ p {
   align-items: center;
 }
 
-.telephone-link-container > a {
+.telephone-link-container>a {
   text-decoration: none;
   color: inherit;
 }
@@ -107,8 +107,8 @@ p {
 }
 
 .telephone-link-container .material-symbols-outlined,
-.current-time-container > .material-symbols-outlined,
-.currency-selector-container > .material-symbols-outlined {
+.current-time-container>.material-symbols-outlined,
+.currency-selector-container>.material-symbols-outlined {
   font-size: 0.875rem;
   padding-right: 0.25rem;
 }
@@ -178,13 +178,11 @@ p {
 }
 
 header h1 {
-  font-size: 1.75rem; /* px equivalent 28px */
+  font-size: 1.75rem;
   font-weight: 600;
   color: #00120a;
   line-height: 2.5rem;
 }
-
-/* desktop navigation */
 
 /* mobile navigation */
 .mobile-navigation {
@@ -202,11 +200,12 @@ header h1 {
   display: flex;
   justify-content: space-around;
 }
+
 .mobile-navigation a {
   text-decoration: none;
   color: #424844;
   font-weight: 700;
-  font-size: 0.7rem; /* px equivalent 11.2px */
+  font-size: 0.7rem;
   padding: 0.6rem 0.25rem;
   display: flex;
   flex-direction: column;
@@ -221,8 +220,10 @@ header h1 {
  * Hero Section
  *****************************/
 .hero-section {
-  display: grid; /* the single row stretches to fill the section, so hero-text can fill it */
-  isolation: isolate; /* keeps hero-image's z-index: -1 inside the section */
+  display: grid;
+  /* the single row stretches to fill the section, so hero-text can fill it */
+  isolation: isolate;
+  /* keeps hero-image's z-index: -1 inside the section */
   min-height: 60vh;
   width: 100%;
   position: relative;
@@ -243,13 +244,10 @@ header h1 {
 .hero-text {
   color: #fff;
   text-align: center;
-  /* hex alpha values 90%-E6, 91%-E8, 92%-EB, 93%-ED, 94%-F0, 95%-F2, 96%-F5, 97%-F7, 98%-FA, 99%-FC */
-  background: radial-gradient(
-    circle,
-    #133f30ed 0%,
-    #0b291ef5 50%,
-    #00120a 100%
-  );
+  background: radial-gradient(circle,
+      #133f30ed 0%,
+      #0b291ef5 50%,
+      #00120a 100%);
   width: 100%;
   padding: 1rem;
   display: flex;
@@ -262,11 +260,12 @@ header h1 {
   font-size: 2rem;
   font-weight: 400;
 }
+
 .hero-text h2.light-gold {
   font-style: italic;
 }
 
-.hero-text > p {
+.hero-text>p {
   font-weight: 300;
   margin: 1rem auto;
   max-width: 800px;
@@ -340,10 +339,11 @@ header h1 {
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  font-size: 0.875rem; /* px equivalent 14px */
+  font-size: 0.875rem;
   line-height: 1.2rem;
   text-transform: uppercase;
 }
+
 .hero-search-container form button:hover {
   transform: scale(1.01);
   color: #ffdea6;
@@ -364,7 +364,7 @@ header h1 {
 }
 
 .hero-tile {
-  background-color: #ffffff0d; /* set to 5% opacity */
+  background-color: #ffffff0d;
   color: #ffffff;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -416,7 +416,7 @@ header h1 {
 }
 
 .story-text-container {
-  font-size: 0.875rem; /* px equivalent 14px */
+  font-size: 0.875rem;
   font-weight: 300;
 }
 
@@ -505,7 +505,8 @@ header h1 {
   padding: 1rem;
   background-color: #f4f3f1;
 }
-.course-selection-section > div:first-of-type {
+
+.course-selection-section>div:first-of-type {
   position: relative;
   margin-bottom: 0.5rem;
 }
@@ -570,10 +571,7 @@ header h1 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: grid;
   grid-template-rows: auto 1fr auto;
-  grid-template-columns: minmax(0.25rem, 0.5rem) minmax(auto, 100%) minmax(
-      0.25rem,
-      0.5rem
-    );
+  grid-template-columns: minmax(0.25rem, 0.5rem) minmax(auto, 100%) minmax(0.25rem, 0.5rem);
   flex: 0 0 min(85%, 400px);
   scroll-snap-align: start;
 }
@@ -592,6 +590,7 @@ header h1 {
   height: 224px;
   object-fit: cover;
 }
+
 .slide-image {
   position: relative;
 }
@@ -639,7 +638,7 @@ header h1 {
   padding: 0.5rem;
 }
 
-.slide-details > div {
+.slide-details>div {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -691,10 +690,7 @@ header h1 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: grid;
   grid-template-rows: auto 2fr 1fr auto;
-  grid-template-columns: minmax(0.25rem, 0.5rem) minmax(auto, 100%) minmax(
-      0.25rem,
-      0.5rem
-    );
+  grid-template-columns: minmax(0.25rem, 0.5rem) minmax(auto, 100%) minmax(0.25rem, 0.5rem);
   max-width: min(85%, 400px);
 }
 
@@ -712,6 +708,7 @@ header h1 {
   height: 224px;
   object-fit: cover;
 }
+
 .experience-card-image {
   position: relative;
 }
@@ -786,12 +783,12 @@ header h1 {
   font-weight: 300;
 }
 
-.experience-card-details > a {
+.experience-card-details>a {
   color: #ffffff;
   text-decoration: none;
 }
 
-.experience-card-details > a > span {
+.experience-card-details>a>span {
   align-self: center;
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -819,6 +816,7 @@ header h1 {
 .experiences-section-footer h3 {
   font-weight: 500;
 }
+
 .experiences-section-footer h2 {
   font-weight: 400;
   margin: 0 0 0.5rem 0;
@@ -829,7 +827,7 @@ header h1 {
   max-width: 784px;
 }
 
-.experiences-section-footer > a {
+.experiences-section-footer>a {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 0.75rem;
   background-color: #785917;
@@ -845,7 +843,7 @@ header h1 {
   text-decoration: none;
 }
 
-.experiences-section-footer > a > span {
+.experiences-section-footer>a>span {
   font-size: 0.75rem;
   margin-left: 0.5rem;
 }
@@ -864,6 +862,7 @@ header h1 {
   gap: 1rem;
   margin-top: 2rem;
 }
+
 /* container and card are both grid containers so applying subgrid means they both share the same row tracks, keeping the rows aligned across cards */
 /* span 4 results in the card occupying 4 row tracks of the parent grid - it spans across 4 rows. */
 .value-card {
@@ -876,7 +875,7 @@ header h1 {
   row-gap: 0;
 }
 
-.value-card > span {
+.value-card>span {
   background-color: #f4f3f1;
   border-radius: 0.5rem;
   padding: 0.5rem;
@@ -948,17 +947,16 @@ header h1 {
 }
 
 .call-to-action-btn-container a:last-of-type {
-  background-color: #ffffff0d; /* set to 5% opacity */
+  background-color: #ffffff0d;
 }
 
-.call-to-action-section > h3 {
+.call-to-action-section>h3 {
   letter-spacing: 0.1rem;
 }
 
 /* *************************** */
 /* Footer */
 /* *************************** */
-
 footer {
   background-color: #f4f3f1;
   padding: 2rem 2rem 0;
@@ -1030,7 +1028,6 @@ footer form {
 /* *************************** */
 /* Newsletter Modal */
 /* *************************** */
-
 .newsletter-modal {
   margin: auto;
   max-width: min(90%, 28rem);
@@ -1053,7 +1050,7 @@ footer form {
   gap: 1rem;
 }
 
-.newsletter-modal-content > span {
+.newsletter-modal-content>span {
   font-size: 3rem;
 }
 
@@ -1080,7 +1077,12 @@ footer form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 0 1rem;
+  padding: 3rem 1rem;
+}
+
+.search-intro-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .search-intro-container p {
@@ -1132,10 +1134,7 @@ footer form {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: grid;
   grid-template-rows: auto 1fr 1fr auto;
-  grid-template-columns: minmax(0.25rem, 0.5rem) minmax(auto, 100%) minmax(
-      0.25rem,
-      0.5rem
-    );
+  grid-template-columns: minmax(0.25rem, 0.5rem) minmax(auto, 100%) minmax(0.25rem, 0.5rem);
   width: min(85%, 400px);
   transition:
     transform 0.3s ease,
@@ -1161,6 +1160,7 @@ footer form {
   height: 224px;
   object-fit: cover;
 }
+
 .search-results-card-image {
   position: relative;
   background: linear-gradient(to bottom, transparent, #00120a 0%);
@@ -1186,7 +1186,7 @@ footer form {
   margin-top: 0.25rem;
 }
 
-.search-results-card-tag-container > span {
+.search-results-card-tag-container>span {
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
   font-size: 0.75rem;
@@ -1197,6 +1197,7 @@ footer form {
   background-color: #0b291e;
   color: #ffffff;
 }
+
 .search-results-card-image .duration-tag {
   background-color: #ffdea6;
   color: #785917;
@@ -1232,13 +1233,13 @@ footer form {
   justify-content: space-evenly;
 }
 
-.search-results-summary > div {
+.search-results-summary>div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.search-results-summary > div span {
+.search-results-summary>div span {
   font-weight: 500;
   margin-bottom: 0.25rem;
 }
@@ -1252,7 +1253,7 @@ footer form {
   font-size: 0.875rem;
 }
 
-.search-results-card-text > p {
+.search-results-card-text>p {
   margin-bottom: 0.25rem;
 }
 
@@ -1290,7 +1291,7 @@ footer form {
   font-weight: 300;
 }
 
-.search-results-card-details > a {
+.search-results-card-details>a {
   align-self: center;
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -1325,7 +1326,7 @@ div.ts-control {
 }
 
 /* duplicate of tom-select style rule to apply multi styling to none multi-select element */
-.ts-wrapper .ts-control > div {
+.ts-wrapper .ts-control>div {
   cursor: pointer;
   margin: 0 3px 3px 0;
   padding: 2px 6px;
@@ -1369,7 +1370,7 @@ div.ts-control {
 }
 
 .consultation-intro-section h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
@@ -1458,7 +1459,7 @@ div.ts-control {
   background-color: #f4f3f1;
 }
 
-#consultation-form > div {
+#consultation-form>div {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -1496,7 +1497,7 @@ div.ts-control {
   position: relative;
 }
 
-.input-container > span.material-symbols-outlined {
+.input-container>span.material-symbols-outlined {
   position: absolute;
   left: 0.5rem;
   top: 50%;
@@ -1513,7 +1514,8 @@ div.ts-control {
 }
 
 .iti__tel-input {
-  padding-left: 9rem !important; /* have to use important to override inline style coming from js - makes space for icon, flag, country code */
+  padding-left: 9rem !important;
+  /* have to use important to override inline style coming from js - makes space for icon, flag, country code */
 }
 
 #query-type {
@@ -1545,7 +1547,6 @@ div.ts-control {
 }
 
 /* Screen sizes */
-
 @media (min-width: 470px) {
   .course-selection-section h2 {
     margin-right: 6.5rem;
@@ -1575,6 +1576,7 @@ div.ts-control {
   footer form {
     flex-direction: row;
   }
+
   footer form input {
     flex: 1 1 0;
   }
@@ -1583,8 +1585,8 @@ div.ts-control {
     grid-template-columns: 1fr 1fr;
   }
 
-  .footer-content > :nth-child(1),
-  .footer-content > :nth-child(4) {
+  .footer-content> :nth-child(1),
+  .footer-content> :nth-child(4) {
     grid-column: 1 / -1;
   }
 
@@ -1595,12 +1597,18 @@ div.ts-control {
     gap: 1rem;
     justify-content: center;
   }
+
+  .search-intro-container h2,
+  .consultation-intro-section h2 {
+    font-size: 3rem;
+  }
 }
 
 @media (min-width: 563px) {
   .protection-statement span {
     font-size: 1rem;
   }
+
   .phone-label {
     display: inline;
   }
@@ -1610,16 +1618,19 @@ div.ts-control {
   .call-to-action-btn-container {
     flex-direction: row;
   }
-  .call-to-action-btn-container > button {
+
+  .call-to-action-btn-container>button {
     min-width: 310px;
   }
 }
 
 @media (min-width: 850px) {
+
   /* show main navigation for desktop devices */
   .main-navigation {
     display: block;
   }
+
   /* hide mobile navigation for desktop devices */
   .mobile-navigation {
     display: none;
@@ -1630,11 +1641,11 @@ div.ts-control {
   }
 
   .wordmark-container h1 {
-    font-size: 2rem; /* px equivalent 32px */
+    font-size: 2rem;
   }
 
   .wordmark-container h2 {
-    font-size: 1rem; /* px equivalent 16px */
+    font-size: 1rem;
   }
 
   .hero-search-container form {
@@ -1674,12 +1685,15 @@ div.ts-control {
     grid-template-columns: repeat(2, 1fr);
     align-items: stretch;
   }
+
   .experience-card {
     max-width: none;
   }
+
   .experiences-section-footer {
     flex-direction: row;
   }
+
   .values-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
@@ -1688,22 +1702,22 @@ div.ts-control {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .footer-content > :nth-child(1) {
+  .footer-content> :nth-child(1) {
     grid-column: 1;
     grid-row: 1 / span 2;
   }
 
-  .footer-content > :nth-child(2) {
+  .footer-content> :nth-child(2) {
     grid-column: 2;
     grid-row: 1;
   }
 
-  .footer-content > :nth-child(3) {
+  .footer-content> :nth-child(3) {
     grid-column: 2;
     grid-row: 2;
   }
 
-  .footer-content > :nth-child(4) {
+  .footer-content> :nth-child(4) {
     grid-column: 3;
     grid-row: 1 / span 2;
   }
@@ -1779,12 +1793,12 @@ div.ts-control {
     flex-direction: row;
   }
 
-  .owner-section-quote-container > img {
+  .owner-section-quote-container>img {
     min-height: 300px;
     border-radius: 2rem;
   }
 
-  .owner-section-quote-container > blockquote {
+  .owner-section-quote-container>blockquote {
     min-height: 300px;
     display: flex;
     flex-direction: column;
@@ -1837,16 +1851,19 @@ div.ts-control {
   .footer-content {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-  .footer-content > :nth-child(n) {
+
+  .footer-content> :nth-child(n) {
     grid-column: auto;
     grid-row: auto;
   }
+
   .ts-wrapper.plugin-remove_button .item .remove {
     font-size: 13px;
     min-width: 0;
     min-height: 0;
     padding-bottom: 4px;
   }
+
   .ts-dropdown .option {
     min-height: 0;
   }
